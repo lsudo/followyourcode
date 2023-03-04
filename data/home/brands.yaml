@@ -1,0 +1,12 @@
+enabled: true
+id: "brands"
+
+content:
+  title: "Odkrywamy świat przy użyciu tych technologi"
+  items:
+    - "images/brands/scratch.png"
+    - "images/brands/python.png"
+    - "images/brands/robot.png"
+    - "images/brands/becreo.jpg"
+    - "images/brands/keyboard.png"
+    - "images/brands/card.png"

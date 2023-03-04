@@ -1,0 +1,27 @@
+enabled: true
+id: "services"
+
+content:
+  title: "Nasz zespół"
+  text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nec quam nibh elit pellentesque velit netus suspendisse. Sed enim, pretium, montes, in ut dolor urna."
+  cards:
+    - image: "images/person.png"
+      title: "Łukasz Sudoł"
+      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Molestie in malesuada eget fames purus ligula luctus tellus. Habitant condimentum sit gravida praesent. "
+      button:
+        label: "Learn more"
+        url: "#"
+
+    - image: "images/person.png"
+      title: "Łukasz Kobylski"
+      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Molestie in malesuada eget fames purus ligula luctus tellus. Habitant condimentum sit gravida praesent. "
+      button:
+        label: "Learn more"
+        url: "#"
+
+    - image: "images/monitor.png"
+      title: "..i Nasz gadżety"
+      text: "Tutaj można opisać Nasze zabawki z linkiem do galerii :)"
+      button:
+        label: "Learn more"
+        url: "#"

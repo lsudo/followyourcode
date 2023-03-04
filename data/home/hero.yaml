@@ -1,0 +1,11 @@
+enabled: true
+id: "hero"
+
+content:
+  title: "Odkryj świat programowania"
+  text: "Naszą misją jest odkrywanie przed dziećmi świata pełnego komputerów, programowania oraz robotów."
+  image: "images/rocket.png"
+
+  buttonSecondary:
+    label: "Dowiedz się więcej"
+    url: ""

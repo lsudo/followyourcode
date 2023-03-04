@@ -1,0 +1,74 @@
+baseURL: "https://followyourcode.pl/"
+theme: "up-business-theme"
+languageCode: "pl-pl"
+
+title: "Follow your code"
+
+# googleAnalytics: ""
+
+summaryLength: 20
+
+params:
+  title: "Follow your code - Odkryj pasjonujący świat programowania"
+  description: "Naszą misją jest odkrywanie przed dziećmi świata pełnego komputerów, programowania oraz robotów."
+  images: 
+    - "images/rocket.png"
+
+  logo: "arrow-up.png"
+
+  favicons:
+    themeColor: "#FFFFFF"
+    backgroundColor: "#FFFFFF"
+    faviconColor: "#000000"
+
+  social:
+    instagram: "#"
+    facebook: "#"
+    twitter: "#"
+
+  location:
+    - "Podkarpackie, Polska"
+
+  contact:
+    - "hello@followyourcode.pl"
+
+  copyright: "© 2023 Follow Your Code | Theme by Write-Only Hugo and Abell Vo"
+
+  postProcess: false
+
+menus:
+  main:
+    - name: "Co robimy"
+      url: "/#"
+      weight: 2
+
+    - name: "Nasz zespół"
+      url: "/#"
+      weight: 3
+
+    - name: "Aktualności"
+      url: "/blog"
+      weight: 5
+
+  buttons:
+    - name: "Kontakt"
+      url: "/#"
+      weight: 5
+      pre: "btn btn-primary text-light"
+
+  footer:
+    - name: "Co robimy"
+      url: "/#"
+      weight: 2
+
+    - name: "Nasz zespół"
+      url: "/#"
+      weight: 3
+
+    - name: "Aktualności"
+      url: "/blog"
+      weight: 5
+
+taxonomies:
+  series: "series"
+  tags: "tags"

@@ -1,0 +1,9 @@
+enabled: true
+id: "cta"
+
+content:
+  title: "Zacznij przygodę już teraz!"
+  image: ""
+  button:
+    label: "Program zajęć"
+    url: "/program"
