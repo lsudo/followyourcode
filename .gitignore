@@ -11,5 +11,14 @@
 # Output of the go coverage tool, specifically when used with LiteIDE
 *.out
 
-# Dependency directories (remove the comment below to include it)
-# vendor/
+.idea
+/public/
+/resources/_gen/
+.DS_Store
+node_modules
+dist
+tmp
+
+hugo.exe
+hugo.linux
+hugo.darwin
