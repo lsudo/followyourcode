@@ -8,4 +8,4 @@
 {{- $sharedJS := $sharedJS | js.Build (dict "minify" "true") -}}
 
 <style type="text/css" media="all">{{ $sharedSCSS.Content | safeCSS }}</style>
-<script>{{- $sharedJS.Content | safeJS -}}</script>
+<script type="script/javascript" src="{{- $sharedJS.Permalink}}"></script>
