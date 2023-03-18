@@ -46,13 +46,9 @@ menus:
       url: "/#"
       weight: 3
 
+  buttons:
     - name: "Aktualności"
       url: "/blog"
-      weight: 5
-
-  buttons:
-    - name: "Kontakt"
-      url: "/#"
       weight: 5
       pre: "btn btn-primary text-light"
 
@@ -67,6 +63,10 @@ menus:
 
     - name: "Aktualności"
       url: "/blog"
+      weight: 5
+
+    - name: "Polityka prywatności"
+      url: "/polityka-prywatnosci"
       weight: 5
 
 taxonomies:
