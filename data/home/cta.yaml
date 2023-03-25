@@ -5,5 +5,5 @@ content:
   title: "Zacznij przygodę już teraz!"
   image: ""
   button:
-    label: "Więcej"
-    url: "/program"
+    label: "Kontakt"
+    url: "/kontakt"
