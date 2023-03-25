@@ -4,33 +4,16 @@ id: "portfolio"
 content:
   - image: "images/person.png"
     title: "Nasza misja"
-    text: "Naszą misją jest odkrywanie przed dziećmi świata pełnego komputerów, programowania oraz robotów."
+    text: "Jesteśmy tu, aby pomóc dzieciom odkryć świat programowania, robotyki oraz komputerów. Nasza misja polega na tym, aby w atrakcyjny i ciekawy sposób zachęcić najmłodszych do nauki i rozwijania swoich umiejętności w dziedzinie programowania. Wierzymy, że każde dziecko ma potencjał, który można rozwijać. Dlatego oferujemy dostęp do narzędzi i zadań, które pomogą dzieciom w odkrywaniu tajemnic nowych technologii."
 
-    buttons: 
-      - label: "See live"
-        url: "#"
-
-      - label: "Read more"
-        url: "#"
 
   - image: "images/tools.png"
     title: "Co robimy"
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sed euismod quis sit gravida pharetra sit. Cursus vel enim pretium vulputate semper sem elit magna neque. Aliquet adipisc."
+    text: "Organizujemy dni otwarte dla dzieci w celu promowaina nauki programowania.
+           Dni otwarte są organizowane w różnych miejscach, takich jak biuro w firmie, w której pracujemy, lub bibliotekach, szkołach czy centrach edukacyjnych. Podczas tych wydarzeń dzieci mają okazję poznać podstawy programowania, pracować w grupach i tworzyć proste aplikacje lub poznać Naszych towarzyszy - roboty :) Wszystkie zajęcia są prowadzone przez doświadczonych specjalistów, którzy pomagają dzieciom zrozumieć podstawowe pojęcia i koncepcje związane z programowaniem."
 
-    buttons: 
-      - label: "See live"
-        url: "#"
-
-      - label: "Read more"
-        url: "#"
 
   - image: "images/cooperation.png"
     title: "Jak wygląda współpraca"
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sed euismod quis sit gravida pharetra sit. Cursus vel enim pretium vulputate semper sem elit magna neque. Aliquet adipisc."
+    text: "Jesteśmy otwarci na współpracę z każdym, kto chce pomóc w naszej misji. Oferujemy różnorodne narzędzia oraz zadania, które można wykorzystać w pracy z dziećmi. Jeśli jesteś nauczycielem, rodzicem, opiekunem, organizatorem zajęć pozalekcyjnych lub po prostu pasjonatem programowania, to zachęcamy do kontaktu. Zapraszamy do zapoznania się z naszymi materiałami i dołączenia do naszej społeczności, która wspólnie działa na rzecz rozwoju umiejętności programistycznych najmłodszych."
 
-    buttons: 
-      - label: "See live"
-        url: "#"
-
-      - label: "Read more"
-        url: "#"

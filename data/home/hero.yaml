@@ -8,4 +8,4 @@ content:
 
   buttonSecondary:
     label: "Dowiedz się więcej"
-    url: ""
+    url: "/kontakt"

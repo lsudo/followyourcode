@@ -24,7 +24,6 @@ params:
   social:
     instagram: "#"
     facebook: "#"
-    twitter: "#"
 
   location:
     - "Podkarpackie, Polska"
@@ -38,35 +37,23 @@ params:
 
 menus:
   main:
-    - name: "Co robimy"
-      url: "/#"
-      weight: 2
-
-    - name: "Nasz zespół"
-      url: "/#"
-      weight: 3
-
     - name: "Aktualności"
       url: "/blog"
-      weight: 5
+      weight: 2
 
   buttons:
     - name: "Kontakt"
-      url: "/#"
+      url: "/kontakt"
       weight: 5
       pre: "btn btn-primary text-light"
 
   footer:
-    - name: "Co robimy"
-      url: "/#"
-      weight: 2
-
-    - name: "Nasz zespół"
-      url: "/#"
-      weight: 3
-
     - name: "Aktualności"
       url: "/blog"
+      weight: 5
+
+    - name: "Polityka prywatności"
+      url: "/polityka-prywatnosci"
       weight: 5
 
 taxonomies:

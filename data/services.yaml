@@ -3,7 +3,7 @@ id: "services"
 
 content:
   title: "Nasz zespół"
-  text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nec quam nibh elit pellentesque velit netus suspendisse. Sed enim, pretium, montes, in ut dolor urna."
+  text: "Jesteśmy zespołem pasjonatów, dla których programowanie to nie tylko praca, ale przede wszystkim pasja. Zawsze chętnie służymy pomocą i radą. Zapraszamy do poznania nas bliżej."
   cards:
     - image: "images/person.png"
       title: "Łukasz Sudoł"
