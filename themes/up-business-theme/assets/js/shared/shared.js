@@ -12,3 +12,5 @@ import "../sections/cta";
 
 import "../sections/blog-list";
 import "../sections/blog-single";
+
+import "./_cookies";
