@@ -7,8 +7,16 @@ aliases = ["polityka"]
 
 Niniejsza Polityka stanowi podstawową informację o celach, sposobach przetwarzania oraz bezpieczeństwie Twoich danych osobowych, jako użytkownika strony: www.followyourcode.pl (zwanej dalej Stroną). Zapoznając się z Polityką prywatności dowiesz się kto jest administratorem Twoich danych osobowych, jakie dane osobowe są przez Stronę zbierane, w jakich celach są wykorzystywane oraz jak są chronione.
 1. Informacje podstawowe.
-   Administratorem Twoich danych osobowych jest: FollowYourCode.pl
+   Administratorem Twoich danych osobowych jest:
+   
+   FollowYourCode.pl
+
+   1). Łukasz Sudoł
+
+   2). Łukasz Kobylski
+
    Kontakt z Administratorem jest możliwy za pośrednictwem:
+
    1). poczty e-mail: kontakt@followyourcode.pl
 2. Zasady przetwarzania danych.
    Administrator przetwarza dane osobowe z poszanowaniem następujących zasad:
@@ -55,7 +63,10 @@ Niniejsza Polityka stanowi podstawową informację o celach, sposobach przetwarz
    Więcej szczegółowych informacji na temat plików cookies dostępnych jest pod adresem www.wszystkoociasteczkach.pl lub w sekcji „Pomoc” w menu przeglądarki internetowej.
    Jeżeli masz wątpliwości, co do ustawień plików cookies, skontaktuj się z operatorem swojej przeglądarki internetowej.
    Jeżeli nie zgadzasz się na wykorzystywanie cookies przez Stronę, opuść ją lub aktywuj odpowiednie ustawienia w swojej przeglądarce internetowej.
-   Usługi zewnętrzne.
-   Google Analytics – Google Analytics to usługa analityczna świadczona przez Google Inc. („Google”). Google wykorzystuje zebrane dane do śledzenia i sprawdzania korzystania z tej strony internetowej w celu przygotowywania raportów dotyczących jej działań i udostępniania ich innym usługom Google. Polityka prywatności Google.
+8. Usługi zewnętrzne.
+   
+   Google Analytics – Google Analytics to usługa analityczna świadczona przez Google Inc. („Google”). Google wykorzystuje zebrane dane do śledzenia i sprawdzania korzystania z tej strony internetowej w celu przygotowywania raportów dotyczących jej działań i udostępniania ich innym usługom Google. Polityka prywatności https://policies.google.com/privacy?hl=pl 
+   
+   Typeform - Typeform to hiszpańska firma usługowa specjalizująca się w tworzeniu formularzy online i ankietach online. Jego główne oprogramowanie tworzy dynamiczne formy w oparciu o potrzeby użytkownika. Oprogramowanie Typeform jest używane przez Apple Inc., Airbnb, Uber i Nike, Inc. Polityka prywatności https://admin.typeform.com/to/dwk6gt/ 
 
-W razie jakichkolwiek pytań zapraszamy do kontaktu kontakt@followyourcode.pl
+9. W razie jakichkolwiek pytań zapraszamy do kontaktu kontakt@followyourcode.pl
