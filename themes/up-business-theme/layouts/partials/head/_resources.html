@@ -3,9 +3,9 @@
 {{- $sharedSCSS := $sharedSCSS | resources.ToCSS (dict "outputStyle" "compressed" "includePaths" (slice "assets")) -}}
 {{- $sharedSCSS := $sharedSCSS | resources.ExecuteAsTemplate "main.scss" . -}}
 
+<style type="text/css" media="all">{{ $sharedSCSS.Content | safeCSS }}</style>
+
 <!-- Load Shared JS -->
 {{- $sharedJS := resources.Get "js/shared/shared.js" -}}
 {{- $sharedJS := $sharedJS | js.Build (dict "minify" "true") -}}
-
-<style type="text/css" media="all">{{ $sharedSCSS.Content | safeCSS }}</style>
-<script type="script/javascript" src="{{- $sharedJS.Permalink}}"></script>
+<script src="{{- $sharedJS.Permalink}}"></script>

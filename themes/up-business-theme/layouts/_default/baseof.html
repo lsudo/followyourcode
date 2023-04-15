@@ -5,5 +5,7 @@
     {{- partial "shared/header.html" . -}}
     {{- block "main" . -}}{{- end -}}
     {{- partial "shared/footer.html" . -}}
+    {{- partial "shared/cookies.html" . -}}
+    <pre style="display: none;">{{ site.BaseURL }}</pre>
   </body>
 </html>
