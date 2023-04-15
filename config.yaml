@@ -46,7 +46,7 @@ menus:
 
   buttons:
     - name: "Zgłoszenie"
-      url: "/formularz"
+      url: "/formularz.html"
       weight: 5
       pre: "btn btn-primary text-light"
 
