@@ -62,3 +62,8 @@ menus:
 taxonomies:
   series: "series"
   tags: "tags"
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
