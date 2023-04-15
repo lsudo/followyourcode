@@ -1,11 +1,11 @@
-# baseURL: "/"
+baseURL: "/"
 theme: "up-business-theme"
 languageCode: "pl-pl"
 
 title: "Follow your code"
 
 # googleAnalytics: ""
-
+enableRobotsTXT: true
 summaryLength: 20
 
 params:
@@ -40,10 +40,13 @@ menus:
     - name: "Aktualności"
       url: "/blog"
       weight: 2
-
-  buttons:
     - name: "Kontakt"
       url: "/kontakt"
+      weight: 2
+
+  buttons:
+    - name: "Zgłoszenie"
+      url: "/formularz"
       weight: 5
       pre: "btn btn-primary text-light"
 
