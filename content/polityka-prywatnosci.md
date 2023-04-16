@@ -16,8 +16,7 @@ Niniejsza Polityka stanowi podstawową informację o celach, sposobach przetwarz
    2). Łukasz Kobylski
 
    Kontakt z Administratorem jest możliwy za pośrednictwem:
-
-   1). poczty e-mail: kontakt@followyourcode.pl
+   1). poczty e-mail: hello@followyourcode.pl
 2. Zasady przetwarzania danych.
    Administrator przetwarza dane osobowe z poszanowaniem następujących zasad:
    1). w oparciu o podstawę prawną i zgodnie z prawem (legalizm);
@@ -69,4 +68,4 @@ Niniejsza Polityka stanowi podstawową informację o celach, sposobach przetwarz
    
    Typeform - Typeform to hiszpańska firma usługowa specjalizująca się w tworzeniu formularzy online i ankietach online. Jego główne oprogramowanie tworzy dynamiczne formy w oparciu o potrzeby użytkownika. Oprogramowanie Typeform jest używane przez Apple Inc., Airbnb, Uber i Nike, Inc. Polityka prywatności https://admin.typeform.com/to/dwk6gt/ 
 
-9. W razie jakichkolwiek pytań zapraszamy do kontaktu kontakt@followyourcode.pl
+9. W razie jakichkolwiek pytań zapraszamy do kontaktu hello@followyourcode.pl
