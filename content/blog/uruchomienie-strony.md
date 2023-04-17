@@ -1,6 +1,6 @@
 +++
 author = "Łukasz Kobylski"
-title = "Nasz strona followyourcode.pl"
+title = "Nasza strona followyourcode.pl"
 date = "2023-04-16"
 image = ""
 tags = [
