@@ -6,7 +6,7 @@ description = "Zapraszamy na dzień dziecka z programowaniem"
 tags = [
     "dziendziecka", "programowanie", "nauka", "dzienotwarty"
 ]
-draft = true
+draft = false
 +++
 
 # Dzień dziecka z programowaniem

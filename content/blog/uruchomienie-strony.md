@@ -6,7 +6,7 @@ image = ""
 tags = [
     "programowanie", "nauka", "strona"
 ]
-draft = true
+draft = false
 +++
 
 # Uruchomienie strony
