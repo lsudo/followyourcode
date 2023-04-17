@@ -4,9 +4,9 @@ title = "Dzień dziecka z programowaniem"
 date = "2023-04-17"
 description = "Zapraszamy na dzień dziecka z programowaniem"
 tags = [
-    "dzien_dziecka", "programowanie", "nauka", "dzienotwarty"
+    "dziendziecka", "programowanie", "nauka", "dzienotwarty"
 ]
-draft = false
+draft = true
 +++
 
 # Dzień dziecka z programowaniem
