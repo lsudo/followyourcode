@@ -10,6 +10,6 @@ content:
     label: "Dowiedz się więcej"
     url: "/kontakt"
 
-  buttonPrimary:
-    label: "Zgłoś udział"
-    url: "/formularz.html"
+  # buttonPrimary:
+  #   label: "Zgłoś udział"
+  #   url: "/formularz.html"

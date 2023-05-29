@@ -6,4 +6,6 @@ aliases = ["kontakt"]
 +++
 Organizatorzy dni otwartych chętnie odpowiedzą na wszelkie pytania oraz wyślą program dnia do wglądu i ustaleń, dlatego zachęcamy do bezpośredniego kontaktu z zespołem.
 
-Wypełnij formularz aby się zapisać [formularz](/formularz.html).
+Rejestracja na tegoroczne dni otwarte w "Dniu dziecka" jest juz zamknięta.
+Jezeli natomiast Twoja szkoła była by zainteresowana zaproszeniem nas w celu przeprowadzenia
+warsztatów z programowania, prosimy o kontakt z nami. 

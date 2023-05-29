@@ -44,11 +44,11 @@ menus:
       url: "/kontakt"
       weight: 2
 
-  buttons:
-    - name: "Zgłoszenie"
-      url: "/formularz.html"
-      weight: 5
-      pre: "btn btn-primary text-light"
+  # buttons:
+  #   - name: "Zgłoszenie"
+  #     url: "/formularz.html"
+  #     weight: 5
+  #     pre: "btn btn-primary text-light"
 
   footer:
     - name: "Aktualności"

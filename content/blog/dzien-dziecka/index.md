@@ -22,6 +22,5 @@ Cieszymy się, że możemy zaprosić Was na to wyjątkowe wydarzenie, które ma 
 
 Zapraszamy wszystkich chętnych do odwiedzenia naszego biura w dniach 1 i 2 czerwca, aby razem spędzić czas i poznać tajniki programowania. To niepowtarzalna okazja, aby zacząć swoją przygodę z nowymi technologiami i poszerzyć swoje horyzonty.
 
-Liczba miejsc jest ograniczona dlatego prosimy szkoły o wysyłanie zgłoszeń wzięcia udziała w dniu dziecka poprzez [formularz](/formularz.html) na naszej stronie.
 
 Czekamy na Was!
