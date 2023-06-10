@@ -9,7 +9,7 @@ tags = [
 draft = false
 +++
 
-Miniony tydzień był naprawdę emocjonujący dla naszego zespołu. Mieliśmy przyjemność zaprosić grupę piątoklasistów ze szkoły sportowej "SMS Stal Rzeszów" na dzień otwarty z okazji Dnia Dziecka. Była to dla nas nie tylko szansa na podzielenie się pasją do programowania, ale również sposobność do zainspirowania młodych umysłów do odkrycia fascynującego świata technologii.
+Miniony tydzień był naprawdę emocjonujący dla naszego zespołu. Mieliśmy przyjemność zaprosić grupę piątoklasistów ze szkoły sportowej SMS Stal Rzeszów na dzień otwarty z okazji Dnia Dziecka. Była to dla nas nie tylko szansa na podzielenie się pasją do programowania, ale również sposobność do zainspirowania młodych umysłów do odkrycia fascynującego świata technologii.
 
 Przywitaliśmy 18 ciekawych uczniów i dwóch nauczycieli, którzy przybyli do nas z pełnym zapałem i gotowością do nauki. Zaczęliśmy od prezentacji na temat historii komputerów i programowania, która na celu miała pokazanie, jak szybko technologia się rozwijała, a także jak bardzo wpłynęła na nasze codzienne życie.
 

@@ -11,7 +11,7 @@ draft = false
 
 # Zapraszamy na dzień z programowaniem
 
-Mamy ogromną przyjemność zaprosić Was na "Dzień dziecka z programowaniem" - pierwsze wydarzenie zorganizowane przez FollowYourCode! To wyjątkowa okazja dla dzieci i młodzieży, aby zapoznać się z programowaniem, robotyką i nowymi technologiami. Zapraszamy szkoły podstawowe na 1 lub 2 czerwca do odwiedzenia naszego biura, gdzie przygotowaliśmy wiele niespodzianek i atrakcji.
+Mamy ogromną przyjemność zaprosić Was na Dzień dziecka z programowaniem - pierwsze wydarzenie zorganizowane przez FollowYourCode! To wyjątkowa okazja dla dzieci i młodzieży, aby zapoznać się z programowaniem, robotyką i nowymi technologiami. Zapraszamy szkoły podstawowe na 1 lub 2 czerwca do odwiedzenia naszego biura, gdzie przygotowaliśmy wiele niespodzianek i atrakcji.
 
 W ciągu dwóch dni "Dnia dziecka z programowaniem" przeprowadzimy wiele ciekawych i interaktywnych warsztatów, które pomogą dzieciom poznać podstawy programowania oraz umożliwią im tworzenie swoich pierwszych projektów. Będziemy mieć dla was wiele ciekawych zabaw i konkursów. Oczywiście nie zabraknie też możliwości zobaczenia, jak wygląda praca programisty na co dzień, a także zobaczenia, jak działają najnowsze technologie oraz posluchać historii programowania.
 
