@@ -22,8 +22,8 @@ params:
     faviconColor: "#000000"
 
   social:
-    instagram: "#"
-    facebook: "#"
+    instagram: "https://www.instagram.com/followyourcode.pl/"
+    # facebook: "#"
 
   location:
     - "Podkarpackie, Polska"
