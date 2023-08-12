@@ -1,6 +1,6 @@
 +++
 title = "Kontakt z Nami"
-description = "Nasz adres e-mal to hello@followyourcode.pl"
+description = "Nasz adres e-mal to followyourcode@gmail.com"
 date = "2023-03-25"
 aliases = ["kontakt"]
 +++
