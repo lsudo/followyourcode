@@ -1,10 +1,10 @@
 {{ $featured := "" }}
 
 {{- with .Params.images -}}
-  {{ $featured = ( index . 0 ) }}"/>
+  {{ $featured = ( index . 0 ) }}
 {{ else -}}
   {{- with .Site.Params.images -}}
-    {{ $featured = ( index . 0 ) }}"/>
+    {{ $featured = ( index . 0 ) }}
   {{ end }}
 {{ end }}
 

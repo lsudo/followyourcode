@@ -4,8 +4,9 @@ description = "Nasz adres e-mal to followyourcode@gmail.com"
 date = "2023-03-25"
 aliases = ["kontakt"]
 +++
-Organizatorzy dni otwartych chętnie odpowiedzą na wszelkie pytania oraz wyślą program dnia do wglądu i ustaleń, dlatego zachęcamy do bezpośredniego kontaktu z zespołem.
+Czy jesteś pasjonatem programowania, nauczycielem, organizatorem warsztatów, lub po prostu ktoś, kto chce się uczyć i dzielić wiedzą? Jesteśmy tutaj, aby pomóc. W FollowYourCode.pl wierzymy w siłę dzielenia się wiedzą i inspiracji w świecie technologii i programowania.
 
-Rejestracja na tegoroczne dni otwarte w "Dniu dziecka" jest juz zamknięta.
-Jezeli natomiast Twoja szkoła była by zainteresowana zaproszeniem nas w celu przeprowadzenia
-warsztatów z programowania, prosimy o kontakt z nami. 
+Jeśli jesteś zainteresowany organizacją warsztatów, zajęć grupowych, lub masz pomysły na wspólne projekty, które mogą szerzyć pasję do kodowania wśród młodszych i starszych, serdecznie zapraszamy do kontaktu.
+
+Razem możemy zrobić więcej, uczyć się, inspirować i rozwijać pasję do technologii.
+Skontaktuj się z nami już dziś!

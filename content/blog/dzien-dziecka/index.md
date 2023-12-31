@@ -2,6 +2,7 @@
 author = "Łukasz Kobylski"
 title = "Dzień dziecka z programowaniem"
 date = "2023-06-10"
+poster = "https://res.cloudinary.com/codeup-images/image/upload/c_fit,w_320/followyourcode/IMG_8315.jpg"
 description = ""
 tags = [
     "dziendziecka", "programowanie", "nauka", "dzienotwarty"
