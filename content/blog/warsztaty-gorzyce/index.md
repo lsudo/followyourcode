@@ -5,7 +5,7 @@ date = "2023-10-10"
 poster = "https://res.cloudinary.com/codeup-images/image/upload/c_fit,w_320/followyourcode/gorzyce/IMG_9901.jpg"
 description = ""
 tags = [
-    "warsztaty", "roboty", "nauka", "elektronika"
+    "warsztaty", "roboty", "nauka", "elektronika", "programowanie"
 ]
 draft = false
 +++
