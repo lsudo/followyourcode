@@ -2,7 +2,7 @@ enabled: true
 id: "brands"
 
 content:
-  title: "Odkrywamy świat przy użyciu tych technologi"
+  title: "Odkrywamy świat przy użyciu tych technologii"
   items:
     - "images/brands/scratch.png"
     - "images/brands/python.png"
