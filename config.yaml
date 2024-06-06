@@ -40,6 +40,9 @@ menus:
     - name: "Aktualności"
       url: "/blog"
       weight: 2
+    - name: "Co robimy"
+      url: "/co-robimy"
+      weight: 2
     - name: "Kontakt"
       url: "/kontakt"
       weight: 2
