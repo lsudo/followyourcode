@@ -56,11 +56,13 @@ menus:
   footer:
     - name: "Aktualności"
       url: "/blog"
-      weight: 5
-
+      weight: 3
+    - name: "Co robimy"
+      url: "/co-robimy"
+      weight: 2
     - name: "Polityka prywatności"
       url: "/polityka-prywatnosci"
-      weight: 5
+      weight: 1
 
 taxonomies:
   series: "series"
