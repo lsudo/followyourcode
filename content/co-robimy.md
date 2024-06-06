@@ -12,6 +12,7 @@ Nasze działania opieramy na przekonaniu, że wczesne zainteresowanie tymi dzied
     <img src="https://res.cloudinary.com/codeup-images/image/upload/c_scale,w_640/followyourcode/gorzyce/IMG_9905_2.jpg" alt="Co robimy" title="followyourcode.pl" />
 </p>
 
+
 #### Nasza oferta:
 1. **Warsztaty programowania**:  
 Prowadzimy warsztaty programowania dla uczniów szkół podstawowych i ponadpodstawowych, dostosowane do różnych poziomów zaawansowania. Nasze sesje są w pełni darmowe, umożliwiają uczestnikom pierwsze kroki w świecie kodowania oraz rozwijają zaawansowane umiejętności.
@@ -20,6 +21,7 @@ Organizujemy lekcje i prelekcje na temat zawodu programisty oraz historii progra
 3. **Projekty edukacyjne**:  
 Realizujemy projekty, które rozbudzają pasję do programowania i innowacji technologicznych. Nasze inicjatywy są zaprojektowane tak, aby angażować, edukować i inspirować młodzież w sposób interaktywny.
 
+
 #### Zakres naszych działań:
 * **Programowanie**: Rozwijanie umiejętności programistycznych od podstaw do zaawansowanych technik.
 * **Robotyka**: Praktyczne podejście do nauki przez tworzenie i programowanie robotów.
@@ -27,7 +29,12 @@ Realizujemy projekty, które rozbudzają pasję do programowania i innowacji tec
 * **Cyberbezpieczeństwo**: Edukacja w zakresie bezpieczeństwa cyfrowego.
 
 
-### Napisz do nas! 
-Jesteśmy otwarci na współpracę z nauczycielami, technologami i każdym, kto chce się podzielić swoją wiedzą i pasją. Razem możemy zainspirować kolejne pokolenia do rozwijania swoich umiejętności i zdolności w obszarze technologii. Zobacz tutaj relację z Naszych warsztatów <https://www.followyourcode.pl/blog/warsztaty-gorzyce/>
 
-Nasz email kontaktowy: [followyourcode@gmail.com](mailto:followyourcode@gmail.com)
+#### Napisz do nas! 
+Jesteśmy otwarci na współpracę z nauczycielami, technologami i każdym, kto chce się podzielić swoją wiedzą i pasją. Razem możemy zainspirować kolejne pokolenia do rozwijania swoich umiejętności i zdolności w obszarze technologii. Zobacz tutaj relację z [Naszych warsztatów](https://www.followyourcode.pl/blog/warsztaty-gorzyce/).
+
+
+<p class="text-center">
+Nasz email kontaktowy: <a href="mailto:followyourcode@gmail.com">followyourcode@gmail.com</a>
+</p>
+
