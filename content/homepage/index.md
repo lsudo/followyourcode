@@ -1,6 +1,3 @@
 ---
-title: "O Nas"
-layout: "o-nas"
+headless: true
 ---
-
-Treść strony "O Nas".

@@ -8,7 +8,7 @@ content:
 
   buttonSecondary:
     label: "Dowiedz się więcej"
-    url: "/kontakt"
+    url: "/co-robimy"
 
   # buttonPrimary:
   #   label: "Zgłoś udział"
