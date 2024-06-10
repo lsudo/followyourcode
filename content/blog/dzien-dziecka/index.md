@@ -17,9 +17,8 @@ Przywitaliśmy 18 ciekawych uczniów i dwóch nauczycieli, którzy przybyli do n
 Następnie odbyła się druga prezentacja, podczas której tłumaczyliśmy, czym jest programowanie, jakie jest jego zastosowanie w codziennym życiu, a także kim jest programista. To było niezwykle ważne, aby uczniowie zrozumieli, że programowanie nie jest tylko nauką o komputerach, ale także narzędziem, które pozwala rozwiązywać problemy i tworzyć coś nowego.
 
 <p>
-    <img src="https://res.cloudinary.com/codeup-images/image/upload/t_followyourcode/followyourcode/IMG_8123.jpg" class="rounded img-thumbnail" alt="Wizyta w biurze firmy GumGum" title="followyourcode.pl"/>
+    <img src="https://res.cloudinary.com/codeup-images/image/upload/t_followyourcode/followyourcode/IMG_8123.jpg" class="rounded img-thumbnail img-fluid mx-auto d-block" alt="Wizyta w biurze firmy GumGum" title="followyourcode.pl"/>
 </p>
-
 Po prezentacjach, mieliśmy przyjemność zaprosić uczniów na wycieczkę po siedzibie firmy GumGum w Rzeszowie, gdzie mogli zobaczyć programistów przy pracy, dowiedzieć się, jak wyglądają ich stanowiska i zrozumieć, jak działa firma technologiczna. Uczniowie byli również zaproszeni do specjalnie przygotowanego pokoju, w którym mogli zobaczyć małą ekspozycję muzealną komputerów, obejmującą stare części, dyskietki, czasopisma i wiele innych eksponatów.
 
 Uczniowie mieli okazję również zobaczyć, jak wygląda programowanie robotów z klocków LEGO, a nawet pobawić się nimi. Prezentowaliśmy prosty robot-zabawkę, zbudowany z Raspberry Pi Pico, sterowany przez Wi-Fi, którego stworzyliśmy sami. To pozwoliło dzieciom zrozumieć, że zabawki mogą być nie tylko kupowane, ale również tworzone samodzielnie. Pokazaliśmy również kilka innych gadżetów IoT stworzonych własnoręcznie.

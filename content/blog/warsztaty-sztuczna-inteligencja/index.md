@@ -13,7 +13,7 @@ draft = false
 W dniach pełnych innowacji i odkryć, mieliśmy przyjemność poprowadzić wyjątkowe warsztaty poświęcone sztucznej inteligencji na zaproszenie firmy SolidData. Sesja edukacyjna skierowana była do pracowników sektora publicznego, turystyki oraz logistyki. Wydarzenie odbyło się w kreatywnym sercu miasta Rzeszów - UrbanLab, przestrzeni, która stała się synonimem innowacyjności i postępu technologicznego.
 
 <p class="text-center">
-    <img src="https://res.cloudinary.com/codeup-images/image/upload/c_scale,w_640/followyourcode/ai_lsudo.jpg" alt="Warsztaty ze sztucznej inteligencji" title="followyourcode.pl" />
+    <img class="rounded img-thumbnail img-fluid mx-auto d-block" src="https://res.cloudinary.com/codeup-images/image/upload/c_scale,w_640/followyourcode/ai_lsudo.jpg" alt="Warsztaty ze sztucznej inteligencji" title="followyourcode.pl" />
 </p>
 
 
@@ -22,7 +22,7 @@ Warsztaty rozpoczęliśmy od podróży przez czas, śledząc rozwój sztucznej i
 Kluczowym elementem naszych warsztatów było wyjaśnienie, jak działają sieci neuronowe - fundament na którym opiera się większość współczesnych systemów AI. Przybliżyliśmy uczestnikom ich strukturę i mechanizmy działania, co pozwoliło na zrozumienie jak maszyny uczą się i przetwarzają ogromne ilości danych.
 
 <p class="text-center">
-    <img src="https://res.cloudinary.com/codeup-images/image/upload/c_scale,w_640/followyourcode/ai_lkob.jpg" alt="Warsztaty ze sztucznej inteligencji" title="followyourcode.pl" />
+    <img class="rounded img-thumbnail img-fluid mx-auto d-block" src="https://res.cloudinary.com/codeup-images/image/upload/c_scale,w_640/followyourcode/ai_lkob.jpg" alt="Warsztaty ze sztucznej inteligencji" title="followyourcode.pl" />
 </p>
 
 
@@ -31,7 +31,7 @@ Nie zapomnieliśmy również poruszyć kwestii bezpieczeństwa i etycznych aspek
 Pokazaliśmy wiele inspirujących przykładów, które można wykorzystać w pracy, nauce orz w codziennym życiu. Uczestnicy mogli poznać jak może wyglądać automatyzacja rutynowych procesów poprzez generowanie kreatywnych treści, po wsparcie w uczeniu się i rozwoju osobistym - możliwości są niemal nieograniczone.
 
 <p class="text-center">
-    <img src="https://res.cloudinary.com/codeup-images/image/upload/c_scale,w_640/followyourcode/ai_all.jpg" alt="Warsztaty ze sztucznej inteligencji" title="followyourcode.pl" />
+    <img class="rounded img-thumbnail img-fluid mx-auto d-block" src="https://res.cloudinary.com/codeup-images/image/upload/c_scale,w_640/followyourcode/ai_all.jpg" alt="Warsztaty ze sztucznej inteligencji" title="followyourcode.pl" />
 </p>
 
 

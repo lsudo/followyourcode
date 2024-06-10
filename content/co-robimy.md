@@ -9,7 +9,7 @@ Czy jesteś nauczycielem, organizatorem warsztatów edukacyjnych, czy po prostu 
 Nasze działania opieramy na przekonaniu, że wczesne zainteresowanie tymi dziedzinami może zapoczątkować pasję, która przekształci się w przyszłą karierę. Wszystko to oferujemy bez żadnych opłat, dzieląc się tym, co najlepsze, ponieważ kiedyś to my byliśmy inspirowani przez innych.
 
 <p class="text-center">
-    <img src="https://res.cloudinary.com/codeup-images/image/upload/c_scale,w_640/followyourcode/gorzyce/IMG_9905_2.jpg" alt="Co robimy" title="followyourcode.pl" />
+    <img class="rounded img-thumbnail img-fluid mx-auto d-block" src="https://res.cloudinary.com/codeup-images/image/upload/c_scale,w_640/followyourcode/gorzyce/IMG_9905_2.jpg" alt="Co robimy" title="followyourcode.pl" />
 </p>
 
 
