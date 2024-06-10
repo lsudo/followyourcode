@@ -1,0 +1,54 @@
+{{ define "main" }}
+<section class="section blog-single py-5 pb-0">
+    <div class="container">
+      <div class="row justify-content-center pb-1">
+        <div class="col-12">
+          {{ with .Title }}
+            <h1 class="fs-1 fw-bold text-center text-primary pb-3">{{ . }}</h1>
+          {{ end }}
+          {{ with .Params.description }}
+            <p class="text-black-61 text-center pb-1">{{ . }}</p>
+          {{ end }}
+        </div>
+      </div>
+    </div>
+  </section>
+<section class="section portfolio py-5">
+    <div class="container">
+        <div class="row portfolio-feature">
+            <div class="col-12 col-xl-6 d-flex justify-content-center align-items-center">
+                <img src="https://res.cloudinary.com/codeup-images/image/upload/c_auto,w_250,h_250,r_max/followyourcode/lsudol.jpg" alt="lsudol" title="Łukasz" />
+            </div>
+            <div class="col-12 col-xl-6 d-flex flex-column justify-content-center">
+                                            
+                <h3 class="fs-1 fw-bold text-primary pb-3">Łukasz Sudoł</h3>
+                
+                
+                <p class="text-black-61 pb-3">
+                    Doświadczony programista oraz menedżer techniczny z bogatym doświadczeniem w realizacji międzynarodowych projektów. Przez ostatnią dekadę miał przyjemność tworzyć zespoły produktowe i skalować infrastrukturę w holenderskim startupie, który ostatecznie osiągnął etap przejęcia. Jest również recenzentem książek technicznych i miłośnikiem literatury. Pasjonuje się startupami, przedsiębiorczością i innowacjami.
+                </p>
+                
+                
+            </div>
+        </div>   
+        <div class="row portfolio-feature">
+            <div class="col-12 col-xl-6 d-flex justify-content-center align-items-center">
+                <img src="https://res.cloudinary.com/codeup-images/image/upload/c_scale,w_250,r_max/followyourcode/lkobylski_avatar.jpg" alt="lkobylskir" title="Łukasz" />
+            </div>
+            <div class="col-12 col-xl-6 d-flex flex-column justify-content-center">
+                            
+                
+                <h3 class="fs-1 fw-bold text-primary pb-3">Łukasz Kobylski</h3>
+                
+                
+                <p class="text-black-61 pb-3">Programista z 13-letnim doświadczeniem, który pełni także rolę managera i lidera zespołu. Obecnie pracuje jako engineering manager w firmie GumGum. Jest pasjonatem nowych technologii oraz entuzjastą elektroniki, z zamiłowaniem do tworzenia urządzeń IoT</p>
+               
+               
+            </div>
+        </div>       
+    </div>
+</section>
+
+
+{{ .Content }}
+{{end}}

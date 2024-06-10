@@ -1,6 +1,5 @@
 ---
+# headless: true
 title: "O Nas"
 layout: "o-nas"
 ---
-
-Treść strony "O Nas".

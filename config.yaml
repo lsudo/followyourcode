@@ -39,13 +39,16 @@ menus:
   main:
     - name: "Aktualności"
       url: "/blog"
-      weight: 2
+      weight: 1
     - name: "Co robimy"
       url: "/co-robimy"
       weight: 2
+    - name: "O nas"
+      url: "/o-nas"
+      weight: 3
     - name: "Kontakt"
       url: "/kontakt"
-      weight: 2
+      weight: 4
 
   # buttons:
   #   - name: "Zgłoszenie"
@@ -56,13 +59,16 @@ menus:
   footer:
     - name: "Aktualności"
       url: "/blog"
-      weight: 3
+      weight: 1
     - name: "Co robimy"
       url: "/co-robimy"
       weight: 2
+    - name: "O nas"
+      url: "/o-nas"
+      weight: 3
     - name: "Polityka prywatności"
       url: "/polityka-prywatnosci"
-      weight: 1
+      weight: 4
 
 taxonomies:
   series: "series"
