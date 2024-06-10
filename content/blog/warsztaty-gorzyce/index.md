@@ -44,7 +44,7 @@ Wizyta w Technikum w Gorzycach była dla nas niesamowitym doświadczeniem. To w�
 </p>
 
 <p>
-    <img class="img-fluid mx-auto d-block" src="https://res.cloudinary.com/codeup-images/image/upload/c_scale,w_1024/followyourcode/gorzyce/IMG_9915.jpg" alt="Warsztaty w Gorzycach" title="followyourcode.pl"/>
+    <img class="rounded img-thumbnail img-fluid mx-auto d-block" src="https://res.cloudinary.com/codeup-images/image/upload/c_scale,w_1024/followyourcode/gorzyce/IMG_9915.jpg" alt="Warsztaty w Gorzycach" title="followyourcode.pl"/>
 </p>
 
 
