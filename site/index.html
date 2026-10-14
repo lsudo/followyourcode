@@ -27,7 +27,6 @@
 </head>
 <body>
   <a class="skip-link" href="#main">Przejdź do treści</a>
-  <div class="progress" aria-hidden="true"></div>
 
   <!-- Icon sprite -->
   <svg class="sprite" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
@@ -49,7 +48,6 @@
     <symbol id="i-instagram" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/></symbol>
     <symbol id="i-copy" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></symbol>
     <symbol id="i-cookie" viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10 4 4 0 0 1-5-5 4 4 0 0 1-5-5"/><path d="M8.5 8.5v.01M16 15.5v.01M12 12v.01M11 17v.01M7 14v.01"/></symbol>
-    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1Z"/></symbol>
   </svg>
 
   <!-- ============ HEADER ============ -->
@@ -57,26 +55,21 @@
     <div class="nav__inner">
       <a class="brand" href="/" aria-label="Follow your code - strona główna">
         <svg class="brand__mark" viewBox="0 0 32 32" aria-hidden="true">
-          <defs><linearGradient id="mark-h" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#6b4dff"/><stop offset="1" stop-color="#10c6a1"/></linearGradient></defs>
-          <rect width="32" height="32" rx="9" fill="url(#mark-h)"/>
+          <rect width="32" height="32" rx="9" fill="#6b4dff"/>
           <path d="M9.5 17.5 16 11l6.5 6.5" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-          <rect class="brand__cursor" x="11" y="21.5" width="10" height="3" rx="1.5" fill="#fff"/>
+          <rect x="11" y="21.5" width="10" height="3" rx="1.5" fill="#fff"/>
         </svg>
         <span class="brand__name">follow <span>your</span> code</span>
       </a>
 
-      <nav class="nav__links" aria-label="Główna nawigacja" data-nav-links>
-        <span class="nav__pill" aria-hidden="true"></span>
+      <nav class="nav__links" aria-label="Główna nawigacja">
         <a href="/blog/">Aktualności</a>
         <a href="/co-robimy/">Co robimy</a>
         <a href="/o-nas/">O nas</a>
         <a href="/kontakt/">Kontakt</a>
       </nav>
 
-      <a class="btn btn--dark btn--sm nav__cta" href="mailto:followyourcode@gmail.com">
-        Napisz do nas
-        <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>
-      </a>
+      <a class="btn btn--dark btn--sm nav__cta" href="mailto:followyourcode@gmail.com">Napisz do nas</a>
 
       <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Otwórz menu" data-menu-toggle>
         <span></span><span></span>
@@ -85,12 +78,11 @@
   </header>
 
   <div class="mmenu" id="mobile-menu" data-menu hidden>
-    <div class="mmenu__glow" aria-hidden="true"></div>
     <nav class="mmenu__links" aria-label="Menu mobilne">
-      <a href="/blog/"><small>01</small>Aktualności</a>
-      <a href="/co-robimy/"><small>02</small>Co robimy</a>
-      <a href="/o-nas/"><small>03</small>O nas</a>
-      <a href="/kontakt/"><small>04</small>Kontakt</a>
+      <a href="/blog/">Aktualności</a>
+      <a href="/co-robimy/">Co robimy</a>
+      <a href="/o-nas/">O nas</a>
+      <a href="/kontakt/">Kontakt</a>
     </nav>
     <div class="mmenu__foot">
       <a href="mailto:followyourcode@gmail.com"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg>followyourcode@gmail.com</a>
@@ -101,186 +93,97 @@
   <main id="main">
 
     <!-- ============ HERO ============ -->
-    <section class="hero" id="top" data-hero>
-      <div class="hero__bg" aria-hidden="true">
-        <div class="hero__blob hero__blob--1"></div>
-        <div class="hero__blob hero__blob--2"></div>
-        <div class="hero__blob hero__blob--3"></div>
-        <div class="hero__dots"></div>
-        <div class="hero__spot"></div>
-        <span class="glyph glyph--1" data-depth="18">{ }</span>
-        <span class="glyph glyph--2" data-depth="-14">&lt;/&gt;</span>
-        <span class="glyph glyph--3" data-depth="10">01</span>
-        <span class="glyph glyph--4" data-depth="-22">;</span>
-        <span class="glyph glyph--5" data-depth="12">( )</span>
-      </div>
-
+    <section class="hero" id="top">
       <div class="container hero__grid">
         <div class="hero__copy">
           <a class="pill" href="/kontakt/" data-reveal>
-            <span class="pulse" aria-hidden="true"></span>
+            <span class="pill__dot" aria-hidden="true"></span>
             Zaproś Nas do swojej szkoły - <strong>pro bono</strong>
             <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>
           </a>
 
-          <h1 class="hero__title">
-            <span class="line"><span>Odkryj świat</span></span>
-            <span class="line"><span><span class="grad-text">programowania</span><span class="caret" aria-hidden="true"></span></span></span>
-          </h1>
+          <h1 class="hero__title" data-reveal style="--d: 60ms">Odkryj świat <span class="accent">programowania</span></h1>
 
-          <p class="hero__lead" data-reveal style="--d: 350ms">
+          <p class="hero__lead" data-reveal style="--d: 120ms">
             Naszą misją jest odkrywanie przed dziećmi świata pełnego komputerów, programowania, robotów oraz sztucznej inteligencji.
           </p>
 
-          <div class="hero__actions" data-reveal style="--d: 480ms">
-            <a class="btn btn--primary" href="/co-robimy/" data-magnetic>
-              <span>Dowiedz się więcej</span>
+          <div class="hero__actions" data-reveal style="--d: 180ms">
+            <a class="btn btn--primary" href="/co-robimy/">
+              Dowiedz się więcej
               <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>
             </a>
-            <a class="btn btn--ghost" href="mailto:followyourcode@gmail.com" data-magnetic>Napisz do nas</a>
+            <a class="btn btn--ghost" href="mailto:followyourcode@gmail.com">Napisz do nas</a>
           </div>
 
-          <ul class="hero__checks" data-reveal style="--d: 600ms">
+          <ul class="hero__checks" data-reveal style="--d: 240ms">
             <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Szkoły podstawowe</li>
             <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Szkoły ponadpodstawowe</li>
             <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Warsztaty, lekcje, prelekcje</li>
           </ul>
         </div>
 
-        <div class="hero__visual" data-reveal style="--d: 200ms">
-          <div class="orbit orbit--outer" aria-hidden="true">
-            <span class="orbit__chip" style="--a: -28deg"><span><svg class="icon" aria-hidden="true"><use href="#i-code"/></svg>Python</span></span>
-            <span class="orbit__chip" style="--a: 62deg"><span><svg class="icon" aria-hidden="true"><use href="#i-bot"/></svg>Roboty</span></span>
-            <span class="orbit__chip" style="--a: 152deg"><span><svg class="icon" aria-hidden="true"><use href="#i-block"/></svg>Scratch</span></span>
-            <span class="orbit__chip" style="--a: 242deg"><span><svg class="icon" aria-hidden="true"><use href="#i-sparkles"/></svg>AI</span></span>
-          </div>
-          <div class="orbit orbit--inner" aria-hidden="true"></div>
-          <div class="hero__glow" aria-hidden="true"></div>
-
-          <div class="hero__rocket" data-depth="-16">
-            <picture>
-              <source srcset="assets/img/rocket.webp" type="image/webp">
-              <img src="assets/img/rocket.png" width="1400" height="971" alt="Rakieta startująca z ekranu laptopa">
-            </picture>
-          </div>
-
-          <div class="codecard" data-depth="22" aria-hidden="true">
-            <div class="codecard__bar"><i></i><i></i><i></i><span>start.py</span></div>
-            <pre class="codecard__body" data-typer></pre>
-          </div>
-
+        <div class="hero__visual" data-reveal style="--d: 120ms">
+          <picture>
+            <source srcset="assets/img/rocket.webp" type="image/webp">
+            <img src="assets/img/rocket.png" width="1400" height="971" alt="Rakieta startująca z ekranu laptopa">
+          </picture>
         </div>
       </div>
-
-      <a class="scroll-cue" href="#technologie" aria-label="Przewiń do kolejnej sekcji">
-        <span class="scroll-cue__mouse" aria-hidden="true"></span>
-        <span>przewiń</span>
-      </a>
     </section>
 
     <!-- ============ TECHNOLOGIES (brands) ============ -->
     <section class="tech" id="technologie" aria-labelledby="tech-title">
       <div class="container">
         <h2 class="kicker kicker--center" id="tech-title" data-reveal>Odkrywamy świat przy użyciu tych technologii</h2>
-      </div>
-
-      <div class="marquee" data-reveal style="--d: 120ms">
-        <div class="marquee__track">
-          <ul class="marquee__group">
-            <li class="chip chip--sun"><span class="chip__icon"><svg class="icon" aria-hidden="true"><use href="#i-block"/></svg></span>Scratch</li>
-            <li class="chip chip--sky"><span class="chip__icon"><svg class="icon" aria-hidden="true"><use href="#i-code"/></svg></span>Python</li>
-            <li class="chip chip--violet"><span class="chip__icon"><svg class="icon" aria-hidden="true"><use href="#i-sparkles"/></svg></span>Sztuczna inteligencja</li>
-            <li class="chip chip--mint"><span class="chip__icon"><svg class="icon" aria-hidden="true"><use href="#i-blocks"/></svg></span>BeCREO Technologies</li>
-            <li class="chip chip--coral"><span class="chip__icon"><svg class="icon" aria-hidden="true"><use href="#i-bot"/></svg></span>Roboty</li>
-            <li class="chip chip--mint"><span class="chip__icon"><svg class="icon" aria-hidden="true"><use href="#i-cpu"/></svg></span>Elektronika</li>
-            <li class="chip chip--violet"><span class="chip__icon"><svg class="icon" aria-hidden="true"><use href="#i-keyboard"/></svg></span>Kodowanie</li>
-          </ul>
-          <ul class="marquee__group" aria-hidden="true">
-            <li class="chip chip--sun"><span class="chip__icon"><svg class="icon"><use href="#i-block"/></svg></span>Scratch</li>
-            <li class="chip chip--sky"><span class="chip__icon"><svg class="icon"><use href="#i-code"/></svg></span>Python</li>
-            <li class="chip chip--violet"><span class="chip__icon"><svg class="icon"><use href="#i-sparkles"/></svg></span>Sztuczna inteligencja</li>
-            <li class="chip chip--mint"><span class="chip__icon"><svg class="icon"><use href="#i-blocks"/></svg></span>BeCREO Technologies</li>
-            <li class="chip chip--coral"><span class="chip__icon"><svg class="icon"><use href="#i-bot"/></svg></span>Roboty</li>
-            <li class="chip chip--mint"><span class="chip__icon"><svg class="icon"><use href="#i-cpu"/></svg></span>Elektronika</li>
-            <li class="chip chip--violet"><span class="chip__icon"><svg class="icon"><use href="#i-keyboard"/></svg></span>Kodowanie</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="marquee marquee--words marquee--reverse" aria-hidden="true">
-        <div class="marquee__track">
-          <p class="marquee__group">
-            <span>Programowanie</span><i>✦</i><span>Robotyka</span><i>✦</i><span>Sztuczna inteligencja</span><i>✦</i><span>Cyberbezpieczeństwo</span><i>✦</i>
-          </p>
-          <p class="marquee__group">
-            <span>Programowanie</span><i>✦</i><span>Robotyka</span><i>✦</i><span>Sztuczna inteligencja</span><i>✦</i><span>Cyberbezpieczeństwo</span><i>✦</i>
-          </p>
-        </div>
+        <ul class="chips" data-reveal style="--d: 60ms">
+          <li class="chip chip--sun"><span class="chip__icon"><svg class="icon" aria-hidden="true"><use href="#i-block"/></svg></span>Scratch</li>
+          <li class="chip chip--sky"><span class="chip__icon"><svg class="icon" aria-hidden="true"><use href="#i-code"/></svg></span>Python</li>
+          <li class="chip chip--violet"><span class="chip__icon"><svg class="icon" aria-hidden="true"><use href="#i-sparkles"/></svg></span>Sztuczna inteligencja</li>
+          <li class="chip chip--mint"><span class="chip__icon"><svg class="icon" aria-hidden="true"><use href="#i-blocks"/></svg></span>BeCREO Technologies</li>
+          <li class="chip chip--coral"><span class="chip__icon"><svg class="icon" aria-hidden="true"><use href="#i-bot"/></svg></span>Roboty</li>
+          <li class="chip chip--mint"><span class="chip__icon"><svg class="icon" aria-hidden="true"><use href="#i-cpu"/></svg></span>Elektronika</li>
+          <li class="chip chip--violet"><span class="chip__icon"><svg class="icon" aria-hidden="true"><use href="#i-keyboard"/></svg></span>Kodowanie</li>
+        </ul>
       </div>
     </section>
 
     <!-- ============ MISSION / WHAT WE DO / COOPERATION (portfolio) ============ -->
-    <section class="story" id="misja" data-story>
+    <section class="story" id="misja">
       <div class="container story__grid">
         <div class="story__aside">
           <p class="kicker" data-reveal>Misja i&nbsp;współpraca</p>
-          <h2 class="section-title" data-reveal style="--d: 80ms">
-            Inspirujemy do zgłębiania tajników
-            <span class="scribble">programowania
-              <svg viewBox="0 0 300 20" preserveAspectRatio="none" aria-hidden="true"><path d="M3 14c40-8 90-11 140-8s100 6 154-3"/></svg>
-            </span>
-            i&nbsp;robotyki
-          </h2>
-          <p class="story__lead" data-reveal style="--d: 160ms">
+          <h2 class="section-title" data-reveal style="--d: 60ms">Inspirujemy do zgłębiania tajników <span class="accent">programowania</span> i&nbsp;robotyki</h2>
+          <p class="story__lead" data-reveal style="--d: 120ms">
             Nasze działania opieramy na przekonaniu, że wczesne zainteresowanie tymi dziedzinami może zapoczątkować pasję, która przekształci się w&nbsp;przyszłą karierę.
           </p>
-
-          <div class="story__counter" aria-hidden="true" data-reveal style="--d: 240ms">
-            <span class="story__num" data-story-num>01</span>
-            <span class="story__total">/03</span>
-            <span class="story__label" data-story-label>Nasza misja</span>
-          </div>
         </div>
 
         <ol class="story__list">
-          <li class="story__line" aria-hidden="true"><span class="story__fill"></span></li>
-
-          <li class="story__item is-active" data-story-item data-label="Nasza misja" style="--accent: var(--violet); --accent-soft: var(--violet-soft)">
+          <li class="story__item" style="--accent: var(--violet); --accent-soft: var(--violet-soft)">
             <span class="story__node" aria-hidden="true">01</span>
-            <article class="card story__card" data-reveal>
-              <div class="card__head">
-                <span class="tile"><svg class="icon" aria-hidden="true"><use href="#i-target"/></svg></span>
-                <span class="mono">// 01 &middot; misja</span>
-              </div>
+            <article class="card" data-reveal>
+              <span class="tile"><svg class="icon" aria-hidden="true"><use href="#i-target"/></svg></span>
               <h3>Nasza misja</h3>
               <p>Jesteśmy tu, aby pomóc dzieciom odkryć świat programowania, robotyki oraz komputerów. Nasza misja polega na tym, aby w&nbsp;atrakcyjny i&nbsp;ciekawy sposób zachęcić najmłodszych do nauki i&nbsp;rozwijania swoich umiejętności w&nbsp;dziedzinie programowania. Wierzymy, że każde dziecko ma potencjał, który można rozwijać. Dlatego oferujemy dostęp do narzędzi i&nbsp;zadań, które pomogą dzieciom w&nbsp;odkrywaniu tajemnic nowych technologii.</p>
-              <ul class="tags"><li>programowanie</li><li>robotyka</li><li>komputery</li></ul>
             </article>
           </li>
 
-          <li class="story__item" data-story-item data-label="Co robimy" style="--accent: var(--mint-strong); --accent-soft: var(--mint-soft)">
+          <li class="story__item" style="--accent: var(--mint-strong); --accent-soft: var(--mint-soft)">
             <span class="story__node" aria-hidden="true">02</span>
-            <article class="card story__card" data-reveal>
-              <div class="card__head">
-                <span class="tile"><svg class="icon" aria-hidden="true"><use href="#i-wrench"/></svg></span>
-                <span class="mono">// 02 &middot; co robimy</span>
-              </div>
+            <article class="card" data-reveal>
+              <span class="tile"><svg class="icon" aria-hidden="true"><use href="#i-wrench"/></svg></span>
               <h3>Co robimy</h3>
               <p>Organizujemy dni otwarte dla dzieci w&nbsp;celu promowania nauki programowania. Dni otwarte są organizowane w&nbsp;różnych miejscach, takich jak biuro w&nbsp;firmie, w&nbsp;której pracujemy, lub bibliotekach, szkołach czy centrach edukacyjnych. Podczas tych wydarzeń dzieci mają okazję poznać podstawy programowania, pracować w&nbsp;grupach i&nbsp;tworzyć proste aplikacje lub poznać Naszych towarzyszy - roboty :) Wszystkie zajęcia są prowadzone przez doświadczonych specjalistów, którzy pomagają dzieciom zrozumieć podstawowe pojęcia i&nbsp;koncepcje związane z&nbsp;programowaniem.</p>
-              <ul class="tags"><li>dni otwarte</li><li>szkoły</li><li>biblioteki</li><li>centra edukacyjne</li></ul>
             </article>
           </li>
 
-          <li class="story__item" data-story-item data-label="Jak wygląda współpraca" style="--accent: var(--coral-strong); --accent-soft: var(--coral-soft)">
+          <li class="story__item" style="--accent: var(--coral-strong); --accent-soft: var(--coral-soft)">
             <span class="story__node" aria-hidden="true">03</span>
-            <article class="card story__card" data-reveal>
-              <div class="card__head">
-                <span class="tile"><svg class="icon" aria-hidden="true"><use href="#i-users"/></svg></span>
-                <span class="mono">// 03 &middot; współpraca</span>
-              </div>
+            <article class="card" data-reveal>
+              <span class="tile"><svg class="icon" aria-hidden="true"><use href="#i-users"/></svg></span>
               <h3>Jak wygląda współpraca</h3>
               <p>Jesteśmy otwarci na współpracę z&nbsp;każdym, kto chce pomóc w&nbsp;naszej misji. Oferujemy różnorodne narzędzia oraz zadania, które można wykorzystać w&nbsp;pracy z&nbsp;dziećmi. Jeśli jesteś nauczycielem, rodzicem, opiekunem, organizatorem zajęć pozalekcyjnych lub po prostu pasjonatem programowania, to zachęcamy do kontaktu. Zapraszamy do zapoznania się z&nbsp;naszymi materiałami i&nbsp;dołączenia do naszej społeczności, która wspólnie działa na rzecz rozwoju umiejętności programistycznych najmłodszych.</p>
-              <ul class="tags"><li>nauczyciele</li><li>rodzice</li><li>opiekunowie</li><li>organizatorzy zajęć</li></ul>
             </article>
           </li>
         </ol>
@@ -290,24 +193,20 @@
     <!-- ============ FACTS ============ -->
     <section class="facts" aria-label="Follow Your Code w skrócie">
       <div class="container">
-        <div class="facts__panel" data-reveal>
-          <div class="facts__stars" aria-hidden="true"></div>
-          <p class="kicker kicker--light">w&nbsp;skrócie</p>
-          <dl class="facts__grid">
-            <div class="fact">
-              <dt class="fact__value" data-scramble>2023</dt>
-              <dd>w&nbsp;tym roku zorganizowaliśmy Nasze pierwsze wydarzenie.</dd>
-            </div>
-            <div class="fact">
-              <dt class="fact__value" data-scramble>4</dt>
-              <dd>obszary: programowanie, robotyka, sztuczna inteligencja i&nbsp;cyberbezpieczeństwo.</dd>
-            </div>
-            <div class="fact">
-              <dt class="fact__value" data-scramble>PL/EN</dt>
-              <dd>zajęcia prowadzimy także po angielsku, dla grup międzynarodowych.</dd>
-            </div>
-          </dl>
-        </div>
+        <dl class="facts__grid" data-reveal>
+          <div class="fact">
+            <dt>2023</dt>
+            <dd>w&nbsp;tym roku zorganizowaliśmy Nasze pierwsze wydarzenie.</dd>
+          </div>
+          <div class="fact">
+            <dt>4</dt>
+            <dd>obszary: programowanie, robotyka, sztuczna inteligencja i&nbsp;cyberbezpieczeństwo.</dd>
+          </div>
+          <div class="fact">
+            <dt>PL/EN</dt>
+            <dd>zajęcia prowadzimy także po angielsku, dla grup międzynarodowych.</dd>
+          </div>
+        </dl>
       </div>
     </section>
 
@@ -316,12 +215,11 @@
       <div class="container">
         <div class="section-head">
           <p class="kicker kicker--center" data-reveal>Co mówią nauczyciele</p>
-          <h2 class="section-title section-title--center" id="opinie-title" data-reveal style="--d: 80ms">Opinie</h2>
+          <h2 class="section-title section-title--center" id="opinie-title" data-reveal style="--d: 60ms">Opinie</h2>
         </div>
 
         <div class="t-track" data-t-track>
-          <figure class="t-card" data-tilt data-reveal style="--accent: var(--violet); --d: 0ms">
-            <span class="t-card__quote" aria-hidden="true">&ldquo;</span>
+          <figure class="t-card" data-reveal style="--accent: var(--violet)">
             <blockquote>Panowie podczas zajęć bez problemu dali radę zainteresować i&nbsp;zaangażować młodzież z&nbsp;technikum, która zawsze ma duże wymagania. Współpraca oraz kontakt od samego początku bezproblemowe :) Bardzo zachęcam wszystkich do udziału w&nbsp;projekcie FollowYourCode - nie pożałujecie, a&nbsp;reakcja uczniów będzie dla Was dowodem na to! :)</blockquote>
             <figcaption>
               <span class="avatar" aria-hidden="true">HP</span>
@@ -329,8 +227,7 @@
             </figcaption>
           </figure>
 
-          <figure class="t-card" data-tilt data-reveal style="--accent: var(--mint-strong); --d: 120ms">
-            <span class="t-card__quote" aria-hidden="true">&ldquo;</span>
+          <figure class="t-card" data-reveal style="--accent: var(--mint-strong); --d: 60ms">
             <blockquote>Zespół Followyourcode.pl przygotował ciekawe i&nbsp;angażujące zajęcia, które w&nbsp;przystępny sposób przybliżyły uczniom podstawy programowania. Wizyta spotkała się z&nbsp;bardzo pozytywnym odbiorem wśród uczniów. Dziękujemy za inspirującą i&nbsp;edukacyjną przygodę.</blockquote>
             <figcaption>
               <span class="avatar" aria-hidden="true">AJ</span>
@@ -338,8 +235,7 @@
             </figcaption>
           </figure>
 
-          <figure class="t-card" data-tilt data-reveal style="--accent: var(--coral-strong); --d: 240ms">
-            <span class="t-card__quote" aria-hidden="true">&ldquo;</span>
+          <figure class="t-card" data-reveal style="--accent: var(--coral-strong); --d: 120ms">
             <blockquote>Zorganizowana wizyta w&nbsp;firmie IT była niezapomnianym doświadczeniem dla uczniów klasy 5. Dzieci mogły zobaczyć na własne oczy, jak wygląda praca programisty i&nbsp;jakie możliwości daje ta profesja. To była świetna lekcja zawodoznawstwa w&nbsp;praktyce!</blockquote>
             <figcaption>
               <span class="avatar" aria-hidden="true">MK</span>
@@ -354,42 +250,23 @@
     <!-- ============ CTA ============ -->
     <section class="cta" aria-labelledby="cta-title">
       <div class="container">
-        <div class="cta__panel" data-cta data-reveal>
-          <canvas class="cta__stars" aria-hidden="true"></canvas>
+        <div class="cta__panel" data-reveal>
           <div class="cta__copy">
-            <p class="cta__countdown mono" aria-hidden="true" data-countdown>&gt; start za 3...</p>
-            <h2 class="cta__title" id="cta-title">Zacznij <span class="grad-text grad-text--warm">przygodę</span> już teraz!</h2>
+            <h2 class="cta__title" id="cta-title">Zacznij przygodę już teraz!</h2>
             <p class="cta__text">Zaproś Nas do swojej szkoły - poprowadzimy zajęcia pro bono. Razem możemy zrobić więcej, uczyć się, inspirować i&nbsp;rozwijać pasję do technologii.</p>
-            <div class="cta__actions">
-              <a class="btn btn--light" href="/kontakt/" data-magnetic data-launch>
-                <span>Kontakt</span>
-                <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>
-              </a>
-              <div class="mailchip">
-                <svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg>
-                <a href="mailto:followyourcode@gmail.com">followyourcode@gmail.com</a>
-                <button type="button" class="mailchip__copy" data-copy="followyourcode@gmail.com" aria-label="Skopiuj adres e-mail">
-                  <svg class="icon" aria-hidden="true"><use href="#i-copy"/></svg>
-                  <span data-copy-label>Kopiuj</span>
-                </button>
-              </div>
-            </div>
           </div>
-
-          <div class="cta__pad" aria-hidden="true">
-            <div class="cta__rocket" data-rocket>
-              <svg viewBox="0 0 64 80">
-                <path class="cta__flame" d="M26 52c0 9 6 18 6 18s6-9 6-18Z" fill="#ffbf4d"/>
-                <path class="cta__flame cta__flame--inner" d="M29 52c0 6 3 11 3 11s3-5 3-11Z" fill="#fff4d6"/>
-                <path d="M19 33l-8 10v10l8-6Z" fill="#ff7a6e" stroke="#1a1240" stroke-width="2.4" stroke-linejoin="round"/>
-                <path d="M45 33l8 10v10l-8-6Z" fill="#ff7a6e" stroke="#1a1240" stroke-width="2.4" stroke-linejoin="round"/>
-                <path d="M32 4c9 7 13 18 13 30v12H19V34C19 22 23 11 32 4Z" fill="#fff" stroke="#1a1240" stroke-width="2.4" stroke-linejoin="round"/>
-                <circle cx="32" cy="25" r="5.5" fill="#4fb1ff" stroke="#1a1240" stroke-width="2.4"/>
-                <path d="M24 46h16l-2 6H26Z" fill="#d9d3f3" stroke="#1a1240" stroke-width="2.4" stroke-linejoin="round"/>
-              </svg>
+          <div class="cta__actions">
+            <a class="btn btn--light" href="/kontakt/">
+              Kontakt
+              <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>
+            </a>
+            <div class="mailchip">
+              <a href="mailto:followyourcode@gmail.com">followyourcode@gmail.com</a>
+              <button type="button" class="mailchip__copy" data-copy="followyourcode@gmail.com" aria-label="Skopiuj adres e-mail">
+                <svg class="icon" aria-hidden="true"><use href="#i-copy"/></svg>
+                <span data-copy-label>Kopiuj</span>
+              </button>
             </div>
-            <div class="cta__smoke"><i></i><i></i><i></i><i></i></div>
-            <div class="cta__base"></div>
           </div>
         </div>
       </div>
@@ -403,10 +280,9 @@
         <div class="footer__brand">
           <a class="brand" href="/" aria-label="Follow your code - strona główna">
             <svg class="brand__mark" viewBox="0 0 32 32" aria-hidden="true">
-              <defs><linearGradient id="mark-f" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#6b4dff"/><stop offset="1" stop-color="#10c6a1"/></linearGradient></defs>
-              <rect width="32" height="32" rx="9" fill="url(#mark-f)"/>
+              <rect width="32" height="32" rx="9" fill="#6b4dff"/>
               <path d="M9.5 17.5 16 11l6.5 6.5" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-              <rect class="brand__cursor" x="11" y="21.5" width="10" height="3" rx="1.5" fill="#fff"/>
+              <rect x="11" y="21.5" width="10" height="3" rx="1.5" fill="#fff"/>
             </svg>
             <span class="brand__name">follow <span>your</span> code</span>
           </a>
@@ -438,8 +314,6 @@
           <p class="footer__line"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg><a href="mailto:followyourcode@gmail.com">followyourcode@gmail.com</a></p>
         </div>
       </div>
-
-      <p class="footer__wordmark" aria-hidden="true">follow your code</p>
 
       <div class="footer__bottom">
         <p>&copy; <span data-year>2026</span> Follow Your Code</p>
