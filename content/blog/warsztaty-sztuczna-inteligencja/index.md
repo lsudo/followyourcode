@@ -2,7 +2,7 @@
 author = "Łukasz Kobylski"
 title = "Warsztaty ze sztucznej inteligencji"
 date = "2024-01-16"
-poster ="https://res.cloudinary.com/codeup-images/image/upload/c_fit,w_320/followyourcode/ai_poster.jpg"
+poster ="https://res.cloudinary.com/codeup-images/image/upload/c_fill,w_960,h_600,f_auto,q_auto/followyourcode/ai_poster.jpg"
 description = ""
 tags = [
     "warsztaty", "sztuczna inteligencja", "ai", "gpt", "chatgpt", "rzeszów"

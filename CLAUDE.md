@@ -52,15 +52,15 @@ Leftovers that nothing renders or links - do not copy patterns from them: `data/
   author = "Łukasz Kobylski"
   title = "Warsztaty w ..."
   date = "YYYY-MM-DD"
-  poster = "https://res.cloudinary.com/codeup-images/image/upload/c_fit,w_320/followyourcode/<file>.jpg"
+  poster = "https://res.cloudinary.com/codeup-images/image/upload/c_fill,w_960,h_600,f_auto,q_auto/followyourcode/<file>.jpg"
   description = "One sentence for search results and link previews."
   tags = ["warsztaty", "programowanie"]
   draft = false
   +++
   ```
 
-- `poster` is the card image on `/blog/`. Without it the card falls back to `images[0]` from the front matter, then to the site-wide `rocket.png`.
-- Fill `description`: it is the page's meta description. Empty falls back to the site description, which every existing post currently does.
+- `poster` is the card image on `/blog/` (two columns from `md` up, box 16:10, about 650 px wide at most). `c_fill,w_960,h_600` matches that box; when the original is smaller than 960 px, keep its width and a 16:10 height instead of upscaling (as `warsztaty-ai-erasmus` does). Without a poster the card falls back to `images[0]` from the front matter, then to the site-wide `rocket.png`.
+- Fill `description`: it is the page's meta description. Empty falls back to the site description, as the older posts still do.
 - Photos are hosted on Cloudinary (account `codeup-images`, folder `followyourcode/`) and embedded as raw HTML (goldmark `unsafe: true`). The authors upload them; ask for the URLs.
 
   ```html

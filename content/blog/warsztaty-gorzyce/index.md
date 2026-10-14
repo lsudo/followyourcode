@@ -2,7 +2,7 @@
 author = "Łukasz Kobylski"
 title = "Warsztaty w Technikum Gorzyce"
 date = "2023-10-10"
-poster = "https://res.cloudinary.com/codeup-images/image/upload/c_fit,w_320/followyourcode/gorzyce/IMG_9901.jpg"
+poster = "https://res.cloudinary.com/codeup-images/image/upload/c_fill,w_960,h_600,f_auto,q_auto/followyourcode/gorzyce/IMG_9901.jpg"
 description = ""
 tags = [
     "warsztaty", "roboty", "nauka", "elektronika", "programowanie"
