@@ -575,7 +575,7 @@ ul, ol { padding: 0; list-style: none; }
   translate: var(--px, 0) var(--py, 0);
   transition: translate .6s var(--ease-out);
 }
-.glyph--1 { top: 47%; left: 40%; font-size: 2.6rem; }
+.glyph--1 { top: 60%; left: 44%; font-size: 2.6rem; }
 .glyph--2 { top: 88%; left: 3%; font-size: 2.2rem; color: rgba(16, 198, 161, .22); }
 .glyph--3 { top: 14%; left: 46%; font-size: 1.8rem; color: rgba(255, 122, 110, .25); }
 .glyph--4 { bottom: 10%; right: 44%; font-size: 3rem; }
@@ -670,7 +670,7 @@ a.pill:hover .icon { transform: translateX(3px); }
 }
 
 .hero__lead {
-  max-width: 33ch;
+  max-width: 36ch;
   color: var(--ink-2);
   font-size: clamp(1.1rem, 1.45vw, 1.3rem);
   line-height: 1.6;
