@@ -1,7 +1,15 @@
-<div id="cookiespopup" class="bg-blue-16 border-blue-16">
-    <div class="mx-auto p-3">
-        <p> Ta strona używa plików cookies.</p>
+{{- /* Google Analytics is not in <head>: _cookies.js loads it only after the visitor accepts. Production builds only, so local previews are not tracked. */ -}}
+{{- $gaID := "" -}}
+{{- if hugo.IsProduction -}}
+  {{- $gaID = site.Config.Services.GoogleAnalytics.ID -}}
+{{- end -}}
+<div id="cookiespopup" class="bg-blue-16 border-blue-16" role="region" aria-label="Zgoda na pliki cookies"{{ with $gaID }} data-ga-id="{{ . }}"{{ end }}>
+    <div class="cookies-content mx-auto p-3">
+        <p>Chcemy używać plików cookies Google Analytics, żeby wiedzieć, ile osób odwiedza stronę. Włączymy je tylko, jeśli się zgodzisz.</p>
         <a href="/polityka-prywatnosci/">Polityka prywatności</a>
-        <a href = "#" id="cookies-ok" class="btn btn-primary">Akceptuję</a>
+        <div class="cookies-actions">
+            <button type="button" id="cookies-reject" class="btn btn-primary">Odrzuć</button>
+            <button type="button" id="cookies-ok" class="btn btn-primary">Akceptuję</button>
+        </div>
     </div>
 </div>

@@ -17,7 +17,7 @@ W dniach pełnych innowacji i odkryć, mieliśmy przyjemność poprowadzić wyj�
 </p>
 
 
-Warsztaty rozpoczęliśmy od podróży przez czas, śledząc rozwój sztucznej inteligencji od jej początków w latach 50., kiedy to Allan Turing zarysował jej teoretyczne podstawy, aż po współczesność, którą charakteryzują wszechstronne modele językowe. To historia o poszukiwaniu granic możliwości maszyn, które dziś potrafią nie tylko naśladować, ale i przewyższać ludzką inteligencję w niektórych dziedzinach.
+Warsztaty rozpoczęliśmy od podróży przez czas, śledząc rozwój sztucznej inteligencji od jej początków w latach 50., kiedy to Alan Turing zarysował jej teoretyczne podstawy, aż po współczesność, którą charakteryzują wszechstronne modele językowe. To historia o poszukiwaniu granic możliwości maszyn, które dziś potrafią nie tylko naśladować, ale i przewyższać ludzką inteligencję w niektórych dziedzinach.
 
 Kluczowym elementem naszych warsztatów było wyjaśnienie, jak działają sieci neuronowe - fundament na którym opiera się większość współczesnych systemów AI. Przybliżyliśmy uczestnikom ich strukturę i mechanizmy działania, co pozwoliło na zrozumienie jak maszyny uczą się i przetwarzają ogromne ilości danych.
 
@@ -28,7 +28,7 @@ Kluczowym elementem naszych warsztatów było wyjaśnienie, jak działają sieci
 
 Nie zapomnieliśmy również poruszyć kwestii bezpieczeństwa i etycznych aspektów wykorzystania sztucznej inteligencji. W dobie rosnącej obecności AI w każdej sferze życia, świadomość potencjalnych zagrożeń i odpowiedzialne korzystanie z technologii staje się kluczowe dla budowania bezpiecznej przyszłości.
 
-Pokazaliśmy wiele inspirujących przykładów, które można wykorzystać w pracy, nauce orz w codziennym życiu. Uczestnicy mogli poznać jak może wyglądać automatyzacja rutynowych procesów poprzez generowanie kreatywnych treści, po wsparcie w uczeniu się i rozwoju osobistym - możliwości są niemal nieograniczone.
+Pokazaliśmy wiele inspirujących przykładów, które można wykorzystać w pracy, nauce oraz w codziennym życiu. Uczestnicy mogli poznać jak może wyglądać automatyzacja rutynowych procesów poprzez generowanie kreatywnych treści, po wsparcie w uczeniu się i rozwoju osobistym - możliwości są niemal nieograniczone.
 
 <p class="text-center">
     <img class="rounded img-thumbnail img-fluid mx-auto d-block" src="https://res.cloudinary.com/codeup-images/image/upload/c_scale,w_640/followyourcode/ai_all.jpg" alt="Warsztaty ze sztucznej inteligencji" title="followyourcode.pl" />

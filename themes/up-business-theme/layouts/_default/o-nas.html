@@ -13,45 +13,41 @@
       </div>
     </div>
   </section>
-<section class="section portfolio py-5">
+<section class="section team py-5">
     <div class="container">
-        <div class="row portfolio-feature">
-            <div class="col-12 col-xl-6 d-flex justify-content-center align-items-center">
-                <img src="https://res.cloudinary.com/codeup-images/image/upload/c_auto,w_250,h_250,r_max/followyourcode/lsudol.jpg" alt="lsudol" title="Łukasz" />
+        <div class="row g-4">
+            <div class="col-12 col-xl-6">
+                <div class="card border-0 border-radius-34 p-4 shadow h-100">
+                    <div class="card-body">
+                        <div class="text-center">
+                            <img class="img-fluid mb-4" src="https://res.cloudinary.com/codeup-images/image/upload/c_fill,g_face,w_500,h_500,r_max,f_auto,q_auto/v1791991917/followyourcode/avatar.jpg" width="250" height="250" alt="Łukasz Sudoł" title="Łukasz Sudoł" />
+                            <h3 class="fs-1 fw-bold text-primary pb-3">Łukasz Sudoł</h3>
+                        </div>
+                        <p class="card-text text-black-61">
+                            Doświadczony programista oraz menedżer techniczny z bogatym doświadczeniem w realizacji międzynarodowych projektów. Przez ostatnią dekadę miał przyjemność tworzyć zespoły produktowe i skalować infrastrukturę w holenderskim startupie, który ostatecznie osiągnął etap przejęcia. Jest również recenzentem książek technicznych i miłośnikiem literatury. Pasjonuje się startupami, przedsiębiorczością i innowacjami.
+                        </p>
+                    </div>
+                </div>
             </div>
-            <div class="col-12 col-xl-6 d-flex flex-column justify-content-center">
-                                            
-                <h3 class="fs-1 fw-bold text-primary pb-3">Łukasz Sudoł</h3>
-                
-                
-                <p class="text-black-61 pb-3">
-                    Doświadczony programista oraz menedżer techniczny z bogatym doświadczeniem w realizacji międzynarodowych projektów. Przez ostatnią dekadę miał przyjemność tworzyć zespoły produktowe i skalować infrastrukturę w holenderskim startupie, który ostatecznie osiągnął etap przejęcia. Jest również recenzentem książek technicznych i miłośnikiem literatury. Pasjonuje się startupami, przedsiębiorczością i innowacjami.
-                </p>
-                
-                
+            <div class="col-12 col-xl-6">
+                <div class="card border-0 border-radius-34 p-4 shadow h-100">
+                    <div class="card-body">
+                        <div class="text-center">
+                            <img class="img-fluid mb-4" src="https://res.cloudinary.com/codeup-images/image/upload/c_fill,g_face,w_500,h_500,r_max,f_auto,q_auto/v1791991945/followyourcode/983a5fa4-3c69-4ecf-bbc4-f2c39c72abfc.jpg" width="250" height="250" alt="Łukasz Kobylski" title="Łukasz Kobylski" />
+                            <h3 class="fs-1 fw-bold text-primary pb-3">Łukasz Kobylski</h3>
+                        </div>
+                        <p class="card-text text-black-61">
+                            Programista z 15-letnim doświadczeniem, pełniący także rolę lidera i mentora zespołu. Obecnie pracuje jako Lider w firmie Space To Grow, gdzie rozwija narzędzie wspierające managerów w rozwoju zawodowym za pomocą sztucznej inteligencji. Pasjonat nowych technologii, entuzjasta AI oraz miłośnik elektroniki z zamiłowaniem do tworzenia urządzeń IoT.
+                        </p>
+                    </div>
+                </div>
             </div>
-        </div>   
-        <div class="row portfolio-feature">
-            <div class="col-12 col-xl-6 d-flex justify-content-center align-items-center">
-                <img src="https://res.cloudinary.com/codeup-images/image/upload/c_scale,w_250,r_max/followyourcode/lkobylski_avatar.jpg" alt="lkobylskir" title="Łukasz" />
-            </div>
-            <div class="col-12 col-xl-6 d-flex flex-column justify-content-center">
-                            
-                
-                <h3 class="fs-1 fw-bold text-primary pb-3">Łukasz Kobylski</h3>
-                
-                
-                <p class="text-black-61 pb-3">Programista z 15-letnim doświadczeniem, pełniący także rolę lidera i mentora zespołu. Obecnie pracuje jako Lider w
-                firmie Space To Grow, gdzie rozwija narzędzie wspierające managerów w rozwoju zawodowym za pomocą sztucznej
-                inteligencji. Pasjonat nowych technologii, entuzjasta AI oraz miłośnik elektroniki z zamiłowaniem do tworzenia urządzeń
-                IoT</p>
-               
-               
-            </div>
-        </div>       
+        </div>
     </div>
 </section>
 
+{{- /* Same testimonials as the homepage, single source: data/home/testimonials.yaml */ -}}
+{{ with .Site.Data.home.testimonials }}{{ partial "sections/testimonials.html" . }}{{ end }}
 
 {{ .Content }}
 {{end}}

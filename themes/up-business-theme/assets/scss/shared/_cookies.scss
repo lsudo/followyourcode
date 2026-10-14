@@ -1,5 +1,6 @@
 #cookiespopup {
-    display: block;
+    // Hidden by default; _cookies.js shows it until the visitor makes a choice.
+    display: none;
     z-index: 99999;
     min-height: 35px;
     width: 100%;
@@ -16,8 +17,24 @@
     border-right-color: rgb(30, 136, 229);
     border-left-color: rgb(30, 136, 229);
 
+    .cookies-content {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 8px 16px;
+
+        p {
+            margin: 0;
+        }
+    }
+
+    .cookies-actions {
+        display: flex;
+        gap: 8px;
+    }
+
     .btn {
-        position: absolute;
         background: rgb(30, 136, 229);
         color: rgb(255, 255, 255);
         padding: 5px 15px;
@@ -26,7 +43,5 @@
         font-weight: normal;
         border: 0px solid rgb(227, 242, 253);
         border-radius: 0px;
-        top: 38%;
-        right: 5px;
     }
 }

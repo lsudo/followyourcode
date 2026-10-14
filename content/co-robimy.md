@@ -16,9 +16,11 @@ Nasze działania opieramy na przekonaniu, że wczesne zainteresowanie tymi dzied
 #### Nasza oferta:
 1. **Warsztaty programowania**:  
 Prowadzimy warsztaty programowania dla uczniów szkół podstawowych i ponadpodstawowych, dostosowane do różnych poziomów zaawansowania. Nasze sesje są w pełni darmowe, umożliwiają uczestnikom pierwsze kroki w świecie kodowania oraz rozwijają zaawansowane umiejętności.
-2. **Edukacja o zawodzie programisty**:
+2. **Warsztaty ze sztucznej inteligencji**:  
+Czy potrafisz odróżnić prawdziwe zdjęcie od deepfake'a? Na naszych warsztatach AI sprawdzamy to w praktyce, w wyzwaniu „Real or AI?”. Pokazujemy, jak działa sztuczna inteligencja, jak rozpoznać dezinformację i stereotypy, których AI uczy się od nas, oraz jak dbać o swoje dane w sieci. Uczymy też, jak zamienić chatbota z maszyny do gotowych odpowiedzi w osobistego tutora, który prowadzi krok po kroku. Zajęcia prowadzimy dla młodzieży i dorosłych, także po angielsku dla grup międzynarodowych. Zobacz relację z [warsztatów dla młodzieży z programu Erasmus+](/blog/warsztaty-ai-erasmus/).
+3. **Edukacja o zawodzie programisty**:  
 Organizujemy lekcje i prelekcje na temat zawodu programisty oraz historii programowania, aby uczniowie mogli lepiej zrozumieć potencjał kariery w tej dynamicznie rozwijającej się branży.
-3. **Projekty edukacyjne**:  
+4. **Projekty edukacyjne**:  
 Realizujemy projekty, które rozbudzają pasję do programowania i innowacji technologicznych. Nasze inicjatywy są zaprojektowane tak, aby angażować, edukować i inspirować młodzież w sposób interaktywny.
 
 

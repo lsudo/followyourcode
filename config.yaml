@@ -1,6 +1,7 @@
 baseURL: "https://followyourcode.pl"
 theme: "up-business-theme"
-languageCode: "pl-pl"
+languageCode: "pl-PL"
+defaultContentLanguage: "pl"
 
 title: "Follow your code"
 
@@ -69,6 +70,9 @@ menus:
     - name: "Polityka prywatności"
       url: "/polityka-prywatnosci"
       weight: 4
+    - name: "Ustawienia cookies"
+      url: "#cookies"
+      weight: 5
 
 taxonomies:
   series: "series"

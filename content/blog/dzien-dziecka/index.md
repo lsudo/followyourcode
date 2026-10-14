@@ -21,7 +21,7 @@ Następnie odbyła się druga prezentacja, podczas której tłumaczyliśmy, czym
 </p>
 Po prezentacjach, mieliśmy przyjemność zaprosić uczniów na wycieczkę po siedzibie firmy GumGum w Rzeszowie, gdzie mogli zobaczyć programistów przy pracy, dowiedzieć się, jak wyglądają ich stanowiska i zrozumieć, jak działa firma technologiczna. Uczniowie byli również zaproszeni do specjalnie przygotowanego pokoju, w którym mogli zobaczyć małą ekspozycję muzealną komputerów, obejmującą stare części, dyskietki, czasopisma i wiele innych eksponatów.
 
-Uczniowie mieli okazję również zobaczyć, jak wygląda programowanie robotów z klocków LEGO, a nawet pobawić się nimi. Prezentowaliśmy prosty robot-zabawkę, zbudowany z Raspberry Pi Pico, sterowany przez Wi-Fi, którego stworzyliśmy sami. To pozwoliło dzieciom zrozumieć, że zabawki mogą być nie tylko kupowane, ale również tworzone samodzielnie. Pokazaliśmy również kilka innych gadżetów IoT stworzonych własnoręcznie.
+Uczniowie mieli okazję również zobaczyć, jak wygląda programowanie robotów z klocków LEGO, a nawet pobawić się nimi. Prezentowaliśmy prosty robot-zabawkę, zbudowany z Raspberry Pi Pico, sterowany przez Wi-Fi, który stworzyliśmy sami. To pozwoliło dzieciom zrozumieć, że zabawki mogą być nie tylko kupowane, ale również tworzone samodzielnie. Pokazaliśmy również kilka innych gadżetów IoT stworzonych własnoręcznie.
 
 Dzieci były również świadkami, jak działa druk 3D, obserwując drukarkę w akcji. Było to dla nich niezwykle ekscytujące doświadczenie, które z pewnością zainspiruje niektóre z nich do dalszego poznawania świata technologii.
 

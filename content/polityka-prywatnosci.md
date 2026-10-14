@@ -1,6 +1,6 @@
 +++
 title = "Polityka prywatności"
-description = "Ta strona (www.followyourcode.pl) używa Cookies (ciasteczek), przeglądanie jej to zgoda na ich używanie."
+description = "Jak strona www.followyourcode.pl przetwarza dane osobowe i używa plików cookies."
 date = "2023-03-18"
 aliases = ["polityka"]
 +++
@@ -37,7 +37,7 @@ Niniejsza Polityka stanowi podstawową informację o celach, sposobach przetwarz
    2). jeśli prześlesz nam wiadomość e-mail to będziemy przetwarzać dane, które będą w nim zawarte.
    3). pozostałe dane, które Administrator przetwarza to adres IP i inne dane zapisywane w plikach cookies, które służą Administratorowi do analizy korzystania przez Ciebie i innych użytkowników Strony.
 5. Termin przechowywania danych.
-   Twoje dane będzie przetwarzać przez okres: Nie jesteśmy w stanie ustalić przez jaki okres przetwarzać będziemy Twoje dane osobowe. Jeśli przekazałeś nam swoje dane w formularzu lub wiadomości e-mail w celach kontaktowych to Twoje dane będziemy przetwarzać do momentu złożenia przez Ciebie żądania usunięcia tych danych lub sprzeciwu wobec przetwarzania, ale również w przypadku, w którym uznamy, że zrealizowaliśmy prawnie uzasadniony interes Administratora.
+   Twoje dane będziemy przetwarzać przez okres: Nie jesteśmy w stanie ustalić przez jaki okres przetwarzać będziemy Twoje dane osobowe. Jeśli przekazałeś nam swoje dane w formularzu lub wiadomości e-mail w celach kontaktowych to Twoje dane będziemy przetwarzać do momentu złożenia przez Ciebie żądania usunięcia tych danych lub sprzeciwu wobec przetwarzania, ale również w przypadku, w którym uznamy, że zrealizowaliśmy prawnie uzasadniony interes Administratora.
 6. Prawa użytkowników.
    W związku z przetwarzaniem Twoich danych przysługują Ci następujące prawa:
    1). dostępu do treści swoich danych oraz
@@ -61,7 +61,7 @@ Niniejsza Polityka stanowi podstawową informację o celach, sposobach przetwarz
    Pliki cookies są zamieszczane w urządzeniu końcowym Użytkownika i wykorzystywane mogą być również przez współpracujących z operatorem Strony reklamodawców oraz innych partnerów. Użytkownik jednakże w każdej chwili może je usunąć.
    Więcej szczegółowych informacji na temat plików cookies dostępnych jest pod adresem www.wszystkoociasteczkach.pl lub w sekcji „Pomoc” w menu przeglądarki internetowej.
    Jeżeli masz wątpliwości, co do ustawień plików cookies, skontaktuj się z operatorem swojej przeglądarki internetowej.
-   Jeżeli nie zgadzasz się na wykorzystywanie cookies przez Stronę, opuść ją lub aktywuj odpowiednie ustawienia w swojej przeglądarce internetowej.
+   Pliki cookies Google Analytics zapisujemy tylko wtedy, gdy klikniesz „Akceptuję” w okienku o plikach cookies. Jeśli klikniesz „Odrzuć”, Google Analytics się nie uruchamia. Swój wybór możesz w każdej chwili zmienić lub wycofać przez link „Ustawienia cookies” w stopce strony.
 8. Usługi zewnętrzne.
    
    Google Analytics – Google Analytics to usługa analityczna świadczona przez Google Inc. („Google”). Google wykorzystuje zebrane dane do śledzenia i sprawdzania korzystania z tej strony internetowej w celu przygotowywania raportów dotyczących jej działań i udostępniania ich innym usługom Google. Polityka prywatności https://policies.google.com/privacy?hl=pl 
