@@ -93,7 +93,20 @@
   <main id="main">
 
     <!-- ============ HERO ============ -->
-    <section class="hero" id="top">
+    <section class="hero" id="top" data-hero>
+      <div class="hero__bg" aria-hidden="true">
+        <div class="hero__blob hero__blob--1"></div>
+        <div class="hero__blob hero__blob--2"></div>
+        <div class="hero__blob hero__blob--3"></div>
+        <div class="hero__dots"></div>
+        <div class="hero__spot"></div>
+        <span class="glyph glyph--1" data-depth="18">{ }</span>
+        <span class="glyph glyph--2" data-depth="-14">&lt;/&gt;</span>
+        <span class="glyph glyph--3" data-depth="10">01</span>
+        <span class="glyph glyph--4" data-depth="-22">;</span>
+        <span class="glyph glyph--5" data-depth="12">( )</span>
+      </div>
+
       <div class="container hero__grid">
         <div class="hero__copy">
           <a class="pill" href="/kontakt/" data-reveal>
@@ -123,13 +136,35 @@
           </ul>
         </div>
 
-        <div class="hero__visual" data-reveal style="--d: 120ms">
-          <picture>
-            <source srcset="assets/img/rocket.webp" type="image/webp">
-            <img src="assets/img/rocket.png" width="1400" height="971" alt="Rakieta startująca z ekranu laptopa">
-          </picture>
+        <div class="hero__visual" data-reveal style="--d: 200ms">
+          <div class="orbit orbit--outer" aria-hidden="true">
+            <span class="orbit__chip" style="--a: -28deg"><span><svg class="icon" aria-hidden="true"><use href="#i-code"/></svg>Python</span></span>
+            <span class="orbit__chip" style="--a: 62deg"><span><svg class="icon" aria-hidden="true"><use href="#i-bot"/></svg>Roboty</span></span>
+            <span class="orbit__chip" style="--a: 152deg"><span><svg class="icon" aria-hidden="true"><use href="#i-block"/></svg>Scratch</span></span>
+            <span class="orbit__chip" style="--a: 242deg"><span><svg class="icon" aria-hidden="true"><use href="#i-sparkles"/></svg>AI</span></span>
+          </div>
+          <div class="orbit orbit--inner" aria-hidden="true"></div>
+          <div class="hero__glow" aria-hidden="true"></div>
+
+          <div class="hero__rocket" data-depth="-16">
+            <picture>
+              <source srcset="assets/img/rocket.webp" type="image/webp">
+              <img src="assets/img/rocket.png" width="1400" height="971" alt="Rakieta startująca z ekranu laptopa">
+            </picture>
+          </div>
+
+          <div class="codecard" data-depth="22" aria-hidden="true">
+            <div class="codecard__bar"><i></i><i></i><i></i><span>start.py</span></div>
+            <pre class="codecard__body" data-typer></pre>
+          </div>
+
         </div>
       </div>
+
+      <a class="scroll-cue" href="#technologie" aria-label="Przewiń do kolejnej sekcji">
+        <span class="scroll-cue__mouse" aria-hidden="true"></span>
+        <span>przewiń</span>
+      </a>
     </section>
 
     <!-- ============ TECHNOLOGIES (brands) ============ -->
