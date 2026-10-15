@@ -9,41 +9,6 @@
   const $$ = (sel, el = document) => [...el.querySelectorAll(sel)];
   const clamp = (v, min, max) => Math.min(max, Math.max(min, v));
 
-  /* ---------- Story: active step + progress line ---------- */
-  const story = $('[data-story]');
-  const storyItems = $$('[data-story-item]');
-  const storyList = story ? $('.story__list', story) : null;
-  const storyNum = $('[data-story-num]');
-  const storyLabel = $('[data-story-label]');
-  let activeIndex = 0;
-
-  const setActive = (i) => {
-    if (i === activeIndex) return;
-    activeIndex = i;
-    storyItems.forEach((el, idx) => el.classList.toggle('is-active', idx === i));
-    if (storyNum) {
-      storyNum.textContent = String(i + 1).padStart(2, '0');
-      storyLabel.textContent = storyItems[i].dataset.label;
-      storyNum.classList.remove('is-changing');
-      void storyNum.offsetWidth;
-      storyNum.classList.add('is-changing');
-    }
-  };
-
-  const updateStoryFill = () => {
-    if (!storyList) return;
-    const r = storyList.getBoundingClientRect();
-    const focus = window.innerHeight * 0.55;
-    const fill = clamp((focus - r.top) / r.height, 0, 1);
-    storyList.style.setProperty('--fill', fill.toFixed(4));
-    // The active step is the last one whose top has passed the focus line.
-    let idx = 0;
-    storyItems.forEach((el, i) => {
-      if (el.getBoundingClientRect().top < focus) idx = i;
-    });
-    setActive(idx);
-  };
-
   /* ---------- Header state + story progress on scroll ---------- */
   const nav = $('[data-nav]');
   let scrollQueued = false;
@@ -58,8 +23,6 @@
       requestAnimationFrame(onScroll);
     }
   }, { passive: true });
-  window.addEventListener('resize', updateStoryFill);
-  onScroll();
 
   /* ---------- Desktop nav: sliding hover pill ---------- */
   const links = $('[data-nav-links]');
@@ -88,7 +51,7 @@
     } else {
       menu.classList.remove('is-open');
       const done = () => { if (!menu.classList.contains('is-open')) menu.hidden = true; };
-      reduceMotion ? done() : setTimeout(done, 260);
+      reduceMotion ? done() : setTimeout(done, 650);
     }
   };
   toggle.addEventListener('click', () => setMenu(toggle.getAttribute('aria-expanded') !== 'true'));
@@ -103,7 +66,7 @@
   /* ---------- Reveal on scroll ---------- */
   const revealEls = $$('[data-reveal]');
   const settle = (el) => {
-    // Once revealed, drop the attribute so the element's own transitions (active story card) take over again.
+    // Once revealed, drop the attribute so the element's own transitions (hover, tilt) take over again.
     const onEnd = (e) => {
       if (e.target === el && e.propertyName === 'opacity') {
         el.removeAttribute('data-reveal');
@@ -122,7 +85,7 @@
           io.unobserve(entry.target);
         }
       });
-    }, { rootMargin: '0px 0px -6% 0px', threshold: 0.1 });
+    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.12 });
     revealEls.forEach((el) => io.observe(el));
   } else {
     revealEls.forEach((el) => el.classList.add('is-in'));
@@ -247,7 +210,96 @@
     }
   }
 
-  /* ---------- Testimonials: dots for the mobile carousel ---------- */
+  /* ---------- Story: active step + progress line ---------- */
+  const story = $('[data-story]');
+  const storyItems = $$('[data-story-item]');
+  const storyList = story ? $('.story__list', story) : null;
+  const storyNum = $('[data-story-num]');
+  const storyLabel = $('[data-story-label]');
+  let activeIndex = 0;
+
+  function setActive(i) {
+    if (i === activeIndex) return;
+    activeIndex = i;
+    storyItems.forEach((el, idx) => el.classList.toggle('is-active', idx === i));
+    if (storyNum) {
+      storyNum.textContent = String(i + 1).padStart(2, '0');
+      storyLabel.textContent = storyItems[i].dataset.label;
+      storyNum.classList.remove('is-changing');
+      void storyNum.offsetWidth;
+      storyNum.classList.add('is-changing');
+    }
+  }
+
+  function updateStoryFill() {
+    if (!storyList) return;
+    const r = storyList.getBoundingClientRect();
+    const focus = window.innerHeight * 0.55;
+    const fill = clamp((focus - r.top) / r.height, 0, 1);
+    storyList.style.setProperty('--fill', fill.toFixed(4));
+    // The active step is the last one whose top has passed the focus line.
+    let idx = 0;
+    storyItems.forEach((el, i) => {
+      if (el.getBoundingClientRect().top < focus) idx = i;
+    });
+    setActive(idx);
+  }
+
+  /* ---------- Facts: scramble-in values ---------- */
+  const scrambleEls = $$('[data-scramble]');
+  const glyphs = '01<>/{}[]#*+=_$%&?';
+  const scramble = (el) => {
+    const final = el.textContent;
+    const duration = 1100;
+    const start = performance.now();
+    const frame = (now) => {
+      const t = clamp((now - start) / duration, 0, 1);
+      const settled = Math.floor(t * final.length);
+      let out = '';
+      for (let i = 0; i < final.length; i += 1) {
+        if (i < settled || final[i] === ' ') out += final[i];
+        else out += glyphs[Math.floor(Math.random() * glyphs.length)];
+      }
+      el.textContent = out;
+      if (t < 1) requestAnimationFrame(frame);
+      else el.textContent = final;
+    };
+    requestAnimationFrame(frame);
+  };
+  if (scrambleEls.length && 'IntersectionObserver' in window && !reduceMotion) {
+    const sio = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const idx = scrambleEls.indexOf(entry.target);
+          setTimeout(() => scramble(entry.target), 250 + idx * 140);
+          sio.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.6 });
+    scrambleEls.forEach((el) => sio.observe(el));
+  }
+
+  /* ---------- Testimonials: 3D tilt + mobile dots ---------- */
+  if (finePointer && !reduceMotion) {
+    $$('[data-tilt]').forEach((card) => {
+      card.addEventListener('pointermove', (e) => {
+        const r = card.getBoundingClientRect();
+        const x = (e.clientX - r.left) / r.width;
+        const y = (e.clientY - r.top) / r.height;
+        card.classList.add('is-tilting');
+        card.style.setProperty('--ry', `${((x - 0.5) * 8).toFixed(2)}deg`);
+        card.style.setProperty('--rx', `${((0.5 - y) * 8).toFixed(2)}deg`);
+        card.style.setProperty('--gx', `${(x * 100).toFixed(1)}%`);
+        card.style.setProperty('--gy', `${(y * 100).toFixed(1)}%`);
+      });
+      card.addEventListener('pointerleave', () => {
+        card.classList.remove('is-tilting');
+        card.style.setProperty('--rx', '0deg');
+        card.style.setProperty('--ry', '0deg');
+      });
+    });
+  }
+
   const track = $('[data-t-track]');
   const dots = $$('[data-t-dots] button');
   if (track && dots.length) {
@@ -267,6 +319,21 @@
       track.scrollTo({ left: cards[i].offsetLeft - parseFloat(getComputedStyle(track).paddingLeft), behavior: 'smooth' });
     }));
     syncDots();
+  }
+
+  /* ---------- Magnetic buttons ---------- */
+  if (finePointer && !reduceMotion) {
+    $$('[data-magnetic]').forEach((btn) => {
+      btn.addEventListener('pointermove', (e) => {
+        const r = btn.getBoundingClientRect();
+        btn.style.setProperty('--bx', `${((e.clientX - r.left - r.width / 2) * 0.18).toFixed(1)}px`);
+        btn.style.setProperty('--by', `${((e.clientY - r.top - r.height / 2) * 0.3).toFixed(1)}px`);
+      });
+      btn.addEventListener('pointerleave', () => {
+        btn.style.setProperty('--bx', '0px');
+        btn.style.setProperty('--by', '0px');
+      });
+    });
   }
 
   /* ---------- CTA: starfield, countdown, rocket launch ---------- */
@@ -322,32 +389,30 @@
     resize();
     window.addEventListener('resize', () => { resize(); if (!running) draw(); });
 
-    if (reduceMotion || !('IntersectionObserver' in window)) {
+    if (reduceMotion) {
       draw();
-    } else {
+    } else if ('IntersectionObserver' in window) {
       new IntersectionObserver(([entry]) => {
         running = entry.isIntersecting;
         if (running) { cancelAnimationFrame(rafId); rafId = requestAnimationFrame(draw); }
       }).observe(cta);
     }
 
-    // Countdown runs once when the panel comes into view; without motion it shows the last step.
+    // Countdown runs once when the panel comes into view.
     const countdown = $('[data-countdown]', cta);
-    const steps = ['> start za 3...', '> start za 2...', '> start za 1...', '> start! ✦'];
-    if (countdown && (reduceMotion || !('IntersectionObserver' in window))) {
-      countdown.textContent = steps[steps.length - 1];
-    } else if (countdown) {
+    if (countdown && !reduceMotion && 'IntersectionObserver' in window) {
       const cio = new IntersectionObserver(([entry]) => {
         if (!entry.isIntersecting) return;
         cio.disconnect();
+        const steps = ['> start za 3...', '> start za 2...', '> start za 1...', '> start! ✦'];
         steps.forEach((txt, i) => setTimeout(() => { countdown.textContent = txt; }, 600 + i * 800));
       }, { threshold: 0.5 });
       cio.observe(cta);
     }
 
-    // Hovering "Kontakt" warms up the engine; staying a moment launches the rocket.
+    // Hovering "Kontakt" warms up the engine; leaving after a moment launches the rocket.
     const launchBtn = $('[data-launch]', cta);
-    if (launchBtn && finePointer && !reduceMotion) {
+    if (launchBtn && !reduceMotion) {
       let launchTimer = 0;
       launchBtn.addEventListener('pointerenter', () => {
         if (cta.classList.contains('is-launching')) return;
@@ -434,4 +499,6 @@
   /* ---------- Footer year ---------- */
   const year = $('[data-year]');
   if (year) year.textContent = String(new Date().getFullYear());
+
+  onScroll();
 })();
