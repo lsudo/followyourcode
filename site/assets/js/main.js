@@ -468,13 +468,55 @@
     });
   });
 
-  /* ---------- Cookie consent (UI only) ----------
-     The template only shows the dialog. The real consent logic - the cookie_consent cookie,
-     loading gtag after "Akceptuję", deleting _ga* cookies on "Odrzuć" - is still to be
-     ported from the Hugo site (assets/js/shared/_cookies.js). Nothing is tracked here. */
+  /* ---------- Cookie consent + Google Analytics ----------
+     Same behaviour as the old site: GA loads only after "Akceptuję". The choice is kept in the
+     cookie_consent cookie ("granted" / "denied") for 180 days, "Ustawienia cookies" in the footer
+     reopens the popup, and "Odrzuć" stops GA and deletes its _ga* cookies. GA runs on the
+     production domain only, so local previews are never tracked. */
   const cookie = $('[data-cookie]');
-  const PREVIEW_KEY = 'fyc-cookie-preview';
   if (cookie) {
+    const CONSENT_COOKIE = 'cookie_consent';
+    const CONSENT_DAYS = 180;
+    const onProduction = /(^|\.)followyourcode\.pl$/.test(window.location.hostname);
+    const gaId = onProduction ? cookie.dataset.gaId : '';
+
+    const readConsent = () => {
+      const match = document.cookie.match(new RegExp(`(?:^|;\\s*)${CONSENT_COOKIE}=([^;]*)`));
+      return match ? match[1] : null;
+    };
+    const saveConsent = (value) => {
+      let c = `${CONSENT_COOKIE}=${value}; max-age=${CONSENT_DAYS * 24 * 60 * 60}; path=/; SameSite=Lax`;
+      if (window.location.protocol === 'https:') c += '; Secure';
+      document.cookie = c;
+    };
+
+    const loadGoogleAnalytics = (id) => {
+      window[`ga-disable-${id}`] = false;
+      if (window.gtag) return;
+      window.dataLayer = window.dataLayer || [];
+      window.gtag = function gtag() { window.dataLayer.push(arguments); };
+      window.gtag('js', new Date());
+      window.gtag('config', id);
+      const script = document.createElement('script');
+      script.async = true;
+      script.src = `https://www.googletagmanager.com/gtag/js?id=${encodeURIComponent(id)}`;
+      document.head.appendChild(script);
+    };
+
+    // Withdrawn consent: stop GA on this page and remove its cookies (GA sets them on the parent domain).
+    const disableGoogleAnalytics = (id) => {
+      window[`ga-disable-${id}`] = true;
+      const parts = window.location.hostname.split('.');
+      const domains = [''];
+      for (let i = 0; i < parts.length - 1; i += 1) domains.push(`; domain=.${parts.slice(i).join('.')}`);
+      document.cookie.split(';').forEach((c) => {
+        const name = c.split('=')[0].trim();
+        if (name === '_ga' || name.startsWith('_ga_')) {
+          domains.forEach((domain) => { document.cookie = `${name}=; max-age=0; path=/${domain}`; });
+        }
+      });
+    };
+
     const showCookie = () => {
       cookie.hidden = false;
       requestAnimationFrame(() => requestAnimationFrame(() => cookie.classList.add('is-visible')));
@@ -483,17 +525,23 @@
       cookie.classList.remove('is-visible');
       setTimeout(() => { cookie.hidden = true; }, reduceMotion ? 0 : 320);
     };
-    let decided = false;
-    try { decided = Boolean(sessionStorage.getItem(PREVIEW_KEY)); } catch { /* storage blocked */ }
-    if (!decided) setTimeout(showCookie, 1200);
+
     $$('[data-cookie-choice]', cookie).forEach((b) => b.addEventListener('click', () => {
-      try { sessionStorage.setItem(PREVIEW_KEY, b.dataset.cookieChoice); } catch { /* storage blocked */ }
+      const consent = b.dataset.cookieChoice === 'accepted' ? 'granted' : 'denied';
+      saveConsent(consent);
       hideCookie();
+      if (!gaId) return;
+      if (consent === 'granted') loadGoogleAnalytics(gaId);
+      else disableGoogleAnalytics(gaId);
     }));
     $$('[data-cookie-open]').forEach((a) => a.addEventListener('click', (e) => {
       e.preventDefault();
       showCookie();
     }));
+
+    const consent = readConsent();
+    if (consent === 'granted' && gaId) loadGoogleAnalytics(gaId);
+    else if (consent === null) setTimeout(showCookie, 1200);
   }
 
   /* ---------- Footer year ---------- */
