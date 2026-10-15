@@ -7,12 +7,73 @@
   const finePointer = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
   const $ = (sel, el = document) => el.querySelector(sel);
   const $$ = (sel, el = document) => [...el.querySelectorAll(sel)];
+  const clamp = (v, min, max) => Math.min(max, Math.max(min, v));
 
-  /* ---------- Header border once the page scrolls ---------- */
+  /* ---------- Story: active step + progress line ---------- */
+  const story = $('[data-story]');
+  const storyItems = $$('[data-story-item]');
+  const storyList = story ? $('.story__list', story) : null;
+  const storyNum = $('[data-story-num]');
+  const storyLabel = $('[data-story-label]');
+  let activeIndex = 0;
+
+  const setActive = (i) => {
+    if (i === activeIndex) return;
+    activeIndex = i;
+    storyItems.forEach((el, idx) => el.classList.toggle('is-active', idx === i));
+    if (storyNum) {
+      storyNum.textContent = String(i + 1).padStart(2, '0');
+      storyLabel.textContent = storyItems[i].dataset.label;
+      storyNum.classList.remove('is-changing');
+      void storyNum.offsetWidth;
+      storyNum.classList.add('is-changing');
+    }
+  };
+
+  const updateStoryFill = () => {
+    if (!storyList) return;
+    const r = storyList.getBoundingClientRect();
+    const focus = window.innerHeight * 0.55;
+    const fill = clamp((focus - r.top) / r.height, 0, 1);
+    storyList.style.setProperty('--fill', fill.toFixed(4));
+    // The active step is the last one whose top has passed the focus line.
+    let idx = 0;
+    storyItems.forEach((el, i) => {
+      if (el.getBoundingClientRect().top < focus) idx = i;
+    });
+    setActive(idx);
+  };
+
+  /* ---------- Header state + story progress on scroll ---------- */
   const nav = $('[data-nav]');
-  const onScroll = () => nav.classList.toggle('is-scrolled', window.scrollY > 8);
-  window.addEventListener('scroll', onScroll, { passive: true });
+  let scrollQueued = false;
+  const onScroll = () => {
+    scrollQueued = false;
+    nav.classList.toggle('is-scrolled', window.scrollY > 16);
+    updateStoryFill();
+  };
+  window.addEventListener('scroll', () => {
+    if (!scrollQueued) {
+      scrollQueued = true;
+      requestAnimationFrame(onScroll);
+    }
+  }, { passive: true });
+  window.addEventListener('resize', updateStoryFill);
   onScroll();
+
+  /* ---------- Desktop nav: sliding hover pill ---------- */
+  const links = $('[data-nav-links]');
+  if (links) {
+    const pill = $('.nav__pill', links);
+    $$('a', links).forEach((a) => {
+      a.addEventListener('mouseenter', () => {
+        pill.style.width = `${a.offsetWidth}px`;
+        pill.style.transform = `translateX(${a.offsetLeft}px)`;
+        pill.style.opacity = '1';
+      });
+    });
+    links.addEventListener('mouseleave', () => { pill.style.opacity = '0'; });
+  }
 
   /* ---------- Mobile menu ---------- */
   const toggle = $('[data-menu-toggle]');
@@ -41,10 +102,22 @@
 
   /* ---------- Reveal on scroll ---------- */
   const revealEls = $$('[data-reveal]');
+  const settle = (el) => {
+    // Once revealed, drop the attribute so the element's own transitions (active story card) take over again.
+    const onEnd = (e) => {
+      if (e.target === el && e.propertyName === 'opacity') {
+        el.removeAttribute('data-reveal');
+        el.style.removeProperty('--d');
+        el.removeEventListener('transitionend', onEnd);
+      }
+    };
+    el.addEventListener('transitionend', onEnd);
+  };
   if ('IntersectionObserver' in window && !reduceMotion) {
     const io = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
+          settle(entry.target);
           entry.target.classList.add('is-in');
           io.unobserve(entry.target);
         }
@@ -194,6 +267,108 @@
       track.scrollTo({ left: cards[i].offsetLeft - parseFloat(getComputedStyle(track).paddingLeft), behavior: 'smooth' });
     }));
     syncDots();
+  }
+
+  /* ---------- CTA: starfield, countdown, rocket launch ---------- */
+  const cta = $('[data-cta]');
+  if (cta) {
+    const canvas = $('.cta__stars', cta);
+    const ctx = canvas.getContext('2d');
+    const dpr = Math.min(window.devicePixelRatio || 1, 2);
+    let stars = [];
+    let w = 0;
+    let h = 0;
+    let speed = 0.35;
+    let targetSpeed = 0.35;
+    let running = false;
+    let rafId = 0;
+
+    const resize = () => {
+      const r = cta.getBoundingClientRect();
+      w = r.width;
+      h = r.height;
+      canvas.width = Math.round(w * dpr);
+      canvas.height = Math.round(h * dpr);
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      const count = Math.round((w * h) / 5200);
+      stars = Array.from({ length: count }, () => ({
+        x: Math.random() * w,
+        y: Math.random() * h,
+        z: Math.random() * 0.9 + 0.1,
+      }));
+    };
+
+    const draw = () => {
+      ctx.clearRect(0, 0, w, h);
+      speed += (targetSpeed - speed) * 0.06;
+      for (const s of stars) {
+        s.y += speed * s.z * 1.6;
+        if (s.y > h + 20) { s.y = -20; s.x = Math.random() * w; }
+        const len = Math.max(0, (speed - 1) * s.z * 6);
+        ctx.globalAlpha = 0.25 + s.z * 0.75;
+        ctx.fillStyle = '#ffffff';
+        if (len > 1) {
+          ctx.fillRect(s.x, s.y - len, s.z * 1.6, len);
+        } else {
+          ctx.beginPath();
+          ctx.arc(s.x, s.y, s.z * 1.3, 0, Math.PI * 2);
+          ctx.fill();
+        }
+      }
+      ctx.globalAlpha = 1;
+      if (running) rafId = requestAnimationFrame(draw);
+    };
+
+    resize();
+    window.addEventListener('resize', () => { resize(); if (!running) draw(); });
+
+    if (reduceMotion || !('IntersectionObserver' in window)) {
+      draw();
+    } else {
+      new IntersectionObserver(([entry]) => {
+        running = entry.isIntersecting;
+        if (running) { cancelAnimationFrame(rafId); rafId = requestAnimationFrame(draw); }
+      }).observe(cta);
+    }
+
+    // Countdown runs once when the panel comes into view; without motion it shows the last step.
+    const countdown = $('[data-countdown]', cta);
+    const steps = ['> start za 3...', '> start za 2...', '> start za 1...', '> start! ✦'];
+    if (countdown && (reduceMotion || !('IntersectionObserver' in window))) {
+      countdown.textContent = steps[steps.length - 1];
+    } else if (countdown) {
+      const cio = new IntersectionObserver(([entry]) => {
+        if (!entry.isIntersecting) return;
+        cio.disconnect();
+        steps.forEach((txt, i) => setTimeout(() => { countdown.textContent = txt; }, 600 + i * 800));
+      }, { threshold: 0.5 });
+      cio.observe(cta);
+    }
+
+    // Hovering "Kontakt" warms up the engine; staying a moment launches the rocket.
+    const launchBtn = $('[data-launch]', cta);
+    if (launchBtn && finePointer && !reduceMotion) {
+      let launchTimer = 0;
+      launchBtn.addEventListener('pointerenter', () => {
+        if (cta.classList.contains('is-launching')) return;
+        cta.classList.add('is-ready');
+        targetSpeed = 1.6;
+        clearTimeout(launchTimer);
+        launchTimer = setTimeout(() => {
+          cta.classList.remove('is-ready');
+          cta.classList.add('is-launching');
+          targetSpeed = 9;
+          setTimeout(() => { targetSpeed = 0.35; }, 1400);
+          setTimeout(() => cta.classList.remove('is-launching'), 3600);
+        }, 900);
+      });
+      launchBtn.addEventListener('pointerleave', () => {
+        if (cta.classList.contains('is-launching')) return;
+        clearTimeout(launchTimer);
+        cta.classList.remove('is-ready');
+        targetSpeed = 0.35;
+      });
+    }
   }
 
   /* ---------- Copy e-mail ---------- */
