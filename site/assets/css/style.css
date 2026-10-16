@@ -1561,6 +1561,43 @@ ul, ol { padding: 0; list-style: none; }
 }
 .post-card:hover .post-card__go { background: var(--ink); color: #fff; transform: translateX(4px); }
 
+/* ---------- Tag index ---------- */
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  max-width: 760px;
+  margin-inline: auto;
+}
+.tag-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: .65em;
+  padding: .55em .6em .55em 1.1em;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--surface);
+  box-shadow: var(--shadow-sm);
+  color: var(--ink);
+  font-weight: 650;
+  text-decoration: none;
+  transition: border-color .3s, transform .4s var(--ease-out);
+}
+.tag-pill span {
+  display: grid;
+  place-items: center;
+  min-width: 1.9em;
+  height: 1.9em;
+  padding: 0 .5em;
+  border-radius: 999px;
+  background: var(--violet-soft);
+  color: var(--violet);
+  font-family: var(--font-mono);
+  font-size: .8rem;
+}
+.tag-pill:hover { border-color: rgba(107, 77, 255, .35); transform: translateY(-2px); }
+
 /* ---------- Footer ---------- */
 .footer {
   padding: clamp(48px, 6vw, 72px) 0 28px;
