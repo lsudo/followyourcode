@@ -74,15 +74,6 @@ menus:
       url: "#cookies"
       weight: 5
 
-# Redesign preview: serves site/ as-is under a hidden, unlinked URL.
-# Declaring a static mount replaces Hugo's default one, so static/ is listed again.
-module:
-  mounts:
-    - source: static
-      target: static
-    - source: site
-      target: static/podglad-emieewthxl
-
 taxonomies:
   series: "series"
   tags: "tags"

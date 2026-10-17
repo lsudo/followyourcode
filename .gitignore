@@ -1,25 +1,12 @@
-# Binaries for programs and plugins
-*.exe
-*.exe~
-*.dll
-*.so
-*.dylib
-
-# Test binary, built with `go test -c`
-*.test
-
-# Output of the go coverage tool, specifically when used with LiteIDE
-*.out
-
 .idea
-/public/
-/resources/_gen/
 .DS_Store
 node_modules
-dist
 tmp
 
+# Deploy output of scripts/build.mjs
+/dist/
+
+# Hugo build output of the old site in legacy/
+/legacy/public/
+/legacy/resources/_gen/
 .hugo_build.lock
-hugo.exe
-hugo.linux
-hugo.darwin

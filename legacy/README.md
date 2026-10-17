@@ -1,3 +1,16 @@
+# Legacy Hugo site
+
+The Hugo site that ran on www.followyourcode.pl until the static redesign at the repository root replaced it. Kept for reference only: nothing builds or deploys from this folder.
+
+To look at it again, use Hugo extended 0.152.1 from the repository root:
+
+    hugo server -s legacy
+    hugo --minify -s legacy    # output in legacy/public/
+
+The original README of the Hugo project follows.
+
+---
+
 # followyourcode
 Engineering homepage projects for Kids.
 
