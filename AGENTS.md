@@ -26,7 +26,7 @@ Plain HTML, CSS and JS at the repository root, edited by hand: no framework, no 
 - The header, footer and cookie popup are copied into every page. A change to them must be made in all of them: grep for a line of the block.
 - `assets/css/style.css` (design tokens at the top), `assets/js/main.js` (nav, reveal effects, testimonials, CTA, cookie consent), self-hosted fonts in `assets/fonts/`, images in `assets/img/`.
 - `legacy/` is the old Hugo site, kept for reference (`legacy/README.md`). Nothing builds or deploys from it.
-- Google indexes the old Hugo URLs, so every one of them must keep answering. `followyourcode/`, `polityka/`, `archives/`, `series/` and every `page/1/` are meta-refresh redirects copied from Hugo's aliases; `images/`, `files/`, the root favicons and `dzien-dziecka-plakat.png` are old asset paths. Never remove or rename a public URL without leaving a redirect.
+- Google indexes the old Hugo URLs, so every one of them must keep answering. `followyourcode/`, `polityka/`, `archives/`, `series/`, `formularz/` (the retired Typeform page) and every `page/1/` are meta-refresh redirects, most of them copied from Hugo's aliases; `images/`, `files/`, the root favicons and `dzien-dziecka-plakat.png` are old asset paths. Never remove or rename a public URL without leaving a redirect.
 
 ## Commands
 
