@@ -1633,7 +1633,7 @@ ul, ol { padding: 0; list-style: none; }
 .social .icon { color: var(--coral-strong); }
 .social:hover { border-color: var(--ink); }
 
-.footer__col h3 {
+.footer__col h2 {
   margin-bottom: 14px;
   font-family: var(--font-mono);
   font-size: .78rem;

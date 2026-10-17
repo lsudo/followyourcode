@@ -1,0 +1,34 @@
+# Follow your code
+
+> Follow your code to inicjatywa dwóch programistów, Łukasza Sudoła i Łukasza Kobylskiego. Odkrywamy przed dziećmi i młodzieżą świat komputerów, programowania, robotów oraz sztucznej inteligencji: prowadzimy warsztaty, lekcje i prelekcje, głównie dla szkół podstawowych i ponadpodstawowych. Szkoły mogą zaprosić Nas na zajęcia pro bono.
+
+- Obszary: programowanie, robotyka, sztuczna inteligencja i cyberbezpieczeństwo.
+- Na zajęciach używamy m.in. Scratcha, Pythona, robotów i elektroniki.
+- Warsztaty ze sztucznej inteligencji prowadzimy dla młodzieży i dorosłych, także po angielsku dla grup międzynarodowych.
+- Pierwsze wydarzenie zorganizowaliśmy w 2023 roku.
+- Lokalizacja: Podkarpackie, Polska.
+- Kontakt: followyourcode@gmail.com, Instagram: https://www.instagram.com/followyourcode.pl/
+
+## Strony
+
+- [Strona główna](https://www.followyourcode.pl/): misja, technologie, opinie nauczycieli i zaproszenie dla szkół
+- [Co robimy](https://www.followyourcode.pl/co-robimy/): oferta - warsztaty programowania, warsztaty ze sztucznej inteligencji, lekcje o zawodzie programisty i historii programowania, projekty edukacyjne
+- [O Nas](https://www.followyourcode.pl/o-nas/): kim jesteśmy i opinie nauczycieli o Naszych zajęciach
+- [Kontakt](https://www.followyourcode.pl/kontakt/): jak się z Nami skontaktować i zaprosić Nas do szkoły
+- [Aktualności](https://www.followyourcode.pl/blog/): relacje z warsztatów i wydarzeń
+
+## Aktualności
+
+- [Warsztaty AI dla młodzieży z programu Erasmus+](https://www.followyourcode.pl/blog/warsztaty-ai-erasmus/) (2026-10-05): Poprowadziliśmy warsztaty o sztucznej inteligencji dla młodzieży z sześciu krajów, która odwiedziła Rzeszów w ramach programu Erasmus+.
+- [Warsztaty ze sztucznej inteligencji](https://www.followyourcode.pl/blog/warsztaty-sztuczna-inteligencja/) (2024-01-16): Warsztaty AI w UrbanLab w Rzeszowie dla pracowników sektora publicznego, turystyki i logistyki: sieci neuronowe, prompt engineering i etyka AI.
+- [Warsztaty w Technikum Gorzyce](https://www.followyourcode.pl/blog/warsztaty-gorzyce/) (2023-10-10): Dwudniowe warsztaty z programowania i elektroniki w Technikum w Gorzycach: uczniowie budowali i programowali roboty, a na koniec ścigali się nimi.
+- [Dzień dziecka z programowaniem](https://www.followyourcode.pl/blog/dzien-dziecka/) (2023-06-10): Dzień otwarty z okazji Dnia Dziecka dla piątoklasistów z SMS Stal Rzeszów: historia komputerów, programowanie, roboty z klocków LEGO i druk 3D.
+- [Zapraszamy na dzień z programowaniem](https://www.followyourcode.pl/blog/zapraszamy-na-dzien-dziecka/) (2023-04-17): Zaproszenie na Dzień dziecka z programowaniem, pierwsze wydarzenie Follow your code.
+- [Nasza strona followyourcode.pl](https://www.followyourcode.pl/blog/uruchomienie-strony/) (2023-04-16): Uruchomiliśmy stronę Follow your code - inicjatywy, która pomaga dzieciom odkryć świat programowania, robotyki oraz komputerów.
+
+## Optional
+
+- [Tagi](https://www.followyourcode.pl/tags/): wpisy pogrupowane tematycznie
+- [Kanał RSS](https://www.followyourcode.pl/index.xml)
+- [Mapa strony](https://www.followyourcode.pl/sitemap.xml)
+- [Polityka prywatności](https://www.followyourcode.pl/polityka-prywatnosci/)

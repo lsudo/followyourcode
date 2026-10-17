@@ -1,6 +1,9 @@
 {
   "name": "Follow your code",
   "short_name": "Follow your code",
+  "description": "Naszą misją jest odkrywanie przed dziećmi świata pełnego komputerów, programowania, robotów oraz sztucznej inteligencji.",
+  "lang": "pl",
+  "start_url": "/",
   "icons": [
     {
       "src": "android-chrome-192x192.png",

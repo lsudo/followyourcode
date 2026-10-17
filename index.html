@@ -8,8 +8,6 @@
   <meta name="theme-color" content="#fbfaff">
   <link rel="canonical" href="https://www.followyourcode.pl/">
   <link rel="alternate" type="application/rss+xml" title="Follow your code" href="index.xml">
-  <!-- Preview build: remove noindex when this page becomes the real homepage -->
-  <meta name="robots" content="noindex, nofollow">
 
   <meta property="og:type" content="website">
   <meta property="og:locale" content="pl_PL">
@@ -17,7 +15,11 @@
   <meta property="og:title" content="Follow your code - Odkryj pasjonujący świat programowania">
   <meta property="og:description" content="Naszą misją jest odkrywanie przed dziećmi świata pełnego komputerów, programowania, robotów oraz sztucznej inteligencji.">
   <meta property="og:url" content="https://www.followyourcode.pl/">
-  <meta property="og:image" content="https://www.followyourcode.pl/assets/img/rocket.png">
+  <meta property="og:image" content="https://www.followyourcode.pl/assets/img/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Follow your code - Odkryj świat programowania">
+  <meta name="twitter:card" content="summary_large_image">
 
   <link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
@@ -28,6 +30,7 @@
   <link rel="stylesheet" href="assets/css/style.css">
   <script>document.documentElement.classList.add('js')</script>
   <script src="assets/js/main.js" defer></script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://www.followyourcode.pl/#organization","name":"Follow your code","url":"https://www.followyourcode.pl/","logo":"https://www.followyourcode.pl/android-chrome-512x512.png","image":"https://www.followyourcode.pl/assets/img/og-image.jpg","description":"Naszą misją jest odkrywanie przed dziećmi świata pełnego komputerów, programowania, robotów oraz sztucznej inteligencji.","email":"followyourcode@gmail.com","sameAs":["https://www.instagram.com/followyourcode.pl/"],"address":{"@type":"PostalAddress","addressRegion":"Podkarpackie","addressCountry":"PL"},"founder":[{"@type":"Person","name":"Łukasz Sudoł"},{"@type":"Person","name":"Łukasz Kobylski"}]},{"@type":"WebSite","@id":"https://www.followyourcode.pl/#website","name":"Follow your code","url":"https://www.followyourcode.pl/","inLanguage":"pl-PL","publisher":{"@id":"https://www.followyourcode.pl/#organization"}}]}</script>
 </head>
 <body>
   <a class="skip-link" href="#main">Przejdź do treści</a>
@@ -159,7 +162,7 @@
           <div class="hero__rocket" data-depth="-16">
             <picture>
               <source srcset="assets/img/rocket.webp" type="image/webp">
-              <img src="assets/img/rocket.png" width="1400" height="971" alt="Rakieta startująca z ekranu laptopa">
+              <img src="assets/img/rocket.png" width="1400" height="971" fetchpriority="high" alt="Rakieta startująca z ekranu laptopa">
             </picture>
           </div>
 
@@ -391,7 +394,7 @@
         </div>
 
         <nav class="footer__col" aria-label="O nas">
-          <h3>O nas</h3>
+          <h2>O nas</h2>
           <ul>
             <li><a href="blog/">Aktualności</a></li>
             <li><a href="co-robimy/">Co robimy</a></li>
@@ -402,12 +405,12 @@
         </nav>
 
         <div class="footer__col">
-          <h3>Lokalizacja</h3>
+          <h2>Lokalizacja</h2>
           <p class="footer__line"><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg>Podkarpackie, Polska</p>
         </div>
 
         <div class="footer__col">
-          <h3>Kontakt</h3>
+          <h2>Kontakt</h2>
           <p class="footer__line"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg><a href="mailto:followyourcode@gmail.com">followyourcode@gmail.com</a></p>
         </div>
       </div>
