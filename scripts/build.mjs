@@ -41,12 +41,12 @@ for (const file of files) {
   }
 }
 
-// URL path of a file, the way Amplify serves it: dir/index.html -> /dir/
+// URL path of a file, the way the hosting serves it: dir/index.html -> /dir/
 const urlPath = (file) => '/' + (file === 'index.html' ? '' : file.endsWith('/index.html') ? file.slice(0, -'index.html'.length) : file);
 const ownUrl = (file) => ORIGIN + encodeURI(urlPath(file));
 
 // File served for a root path, or null. A directory without the trailing slash
-// counts as found: Amplify redirects it to the slash form.
+// counts as found: the hosting serves its index.html there too.
 const fileFor = (path) => {
   let p = decodeURI(path.split('#')[0].split('?')[0]).normalize('NFC').replace(/^\//, '');
   if (p === '' || p.endsWith('/')) p += 'index.html';
@@ -60,6 +60,8 @@ const isRedirect = (file) => /http-equiv="refresh"/.test(read(file));
 const attr = (html, re) => (html.match(re) || [])[1];
 
 // 2. Links and assets: every internal href/src/url() resolves, and none points at a redirect page.
+// Pages link root-absolute (/co-robimy/): the hosting serves /blog as well as /blog/, and a
+// relative link would resolve differently on the two.
 let links = 0;
 const checkTarget = (where, raw, resolved) => {
   links++;
@@ -74,9 +76,11 @@ const external = (ref) => /^(?:[a-z][a-z0-9+.-]*:|\/\/|#)/i.test(ref) || ref ===
 
 for (const file of files.filter((f) => TEXT_TYPES.has(extname(f)))) {
   const text = read(file);
-  if (file.endsWith('.html') && !isRedirect(file)) {
-    for (const [, ref] of text.matchAll(/\s(?:href|src)="([^"]*)"/g)) {
-      if (!external(ref)) checkTarget(file, ref, resolveFrom(file, ref));
+  if (file.endsWith('.html')) {
+    for (const [, ref] of [...text.matchAll(/\s(?:href|src)="([^"]*)"|\ssrcset="([^"\s,]*)|url=([^"]+)"/g)].map((m) => [m[0], m[1] ?? m[2] ?? m[3]])) {
+      if (external(ref)) continue;
+      if (!ref.startsWith('/')) problems.push(`${file}: relative link ${ref}; use a root-absolute one`);
+      if (!isRedirect(file)) checkTarget(file, ref, resolveFrom(file, ref));
     }
   }
   if (file.endsWith('.css')) {

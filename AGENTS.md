@@ -22,7 +22,7 @@ A private hobby project, fully separate from the authors' S2G day job. Nothing f
 
 Plain HTML, CSS and JS at the repository root, edited by hand: no framework, no generator, no dependencies.
 
-- Each page is `<path>/index.html`, served at `/<path>/`. Internal links are relative (`../co-robimy/`); only `404.html` uses root-absolute links, because it is served at any depth.
+- Each page is `<path>/index.html`, served at `/<path>/`. The hosting also serves it at `/<path>` without redirecting, so internal links, images and styles are root-absolute (`/co-robimy/`, `/assets/css/style.css`): a relative link would break on the slashless URL. The build check rejects relative links.
 - The header, footer and cookie popup are copied into every page. A change to them must be made in all of them: grep for a line of the block.
 - `assets/css/style.css` (design tokens at the top), `assets/js/main.js` (nav, reveal effects, testimonials, CTA, cookie consent), self-hosted fonts in `assets/fonts/`, images in `assets/img/`.
 - `legacy/` is the old Hugo site, kept for reference (`legacy/README.md`). Nothing builds or deploys from it.

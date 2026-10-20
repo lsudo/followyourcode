@@ -1,5 +1,5 @@
-// Local preview that answers like the live site: /dir/ serves dir/index.html,
-// /dir redirects to /dir/, a missing page gets 404.html with status 404.
+// Local preview that answers like the live site: /dir/ and /dir both serve
+// dir/index.html (no redirect), a missing page gets 404.html with status 404.
 // Nothing is cached, so a refresh always shows the files as they are on disk.
 // Usage: node scripts/serve.mjs [port] [dir]   (defaults: 8000, the repository root)
 import { createServer } from 'node:http';
@@ -17,21 +17,18 @@ const TYPES = {
 };
 
 const isFile = async (p) => (await stat(p).catch(() => null))?.isFile() ?? false;
-const isDir = async (p) => (await stat(p).catch(() => null))?.isDirectory() ?? false;
 
 createServer(async (req, res) => {
   const send = async (status, file) => {
     res.writeHead(status, { 'Content-Type': TYPES[extname(file)] || 'application/octet-stream', 'Cache-Control': 'no-store' });
     res.end(await readFile(file));
   };
-  const path = decodeURIComponent(new URL(req.url, 'http://localhost').pathname).normalize('NFC');
+  let path;
+  try { path = decodeURIComponent(new URL(req.url, 'http://localhost').pathname).normalize('NFC'); } catch { return send(404, join(root, '404.html')); }
   const file = join(root, normalize(path));
   if (!file.startsWith(root)) return send(404, join(root, '404.html'));
   if (path.endsWith('/') && await isFile(join(file, 'index.html'))) return send(200, join(file, 'index.html'));
   if (!path.endsWith('/') && await isFile(file)) return send(200, file);
-  if (!path.endsWith('/') && await isDir(file)) {
-    res.writeHead(301, { Location: encodeURI(path + '/'), 'Cache-Control': 'no-store' });
-    return res.end();
-  }
+  if (!path.endsWith('/') && await isFile(join(file, 'index.html'))) return send(200, join(file, 'index.html'));
   send(404, join(root, '404.html'));
 }).listen(port, '127.0.0.1', () => console.log(`Serving ${root} at http://127.0.0.1:${port}/`));
