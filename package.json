@@ -1,0 +1,11 @@
+{
+  "name": "followyourcode",
+  "private": true,
+  "description": "Website of Follow Your Code (www.followyourcode.pl): plain static HTML, no dependencies.",
+  "scripts": {
+    "build": "node scripts/build.mjs"
+  },
+  "engines": {
+    "node": "22.x"
+  }
+}

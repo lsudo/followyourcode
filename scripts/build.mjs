@@ -1,4 +1,4 @@
-// Copy the website into dist/ (what Amplify deploys) and check it first.
+// Copy the website into dist/ (what the hosting deploys) and check it first.
 // Fails on anything that would break the live site or its search listing.
 // Usage: node scripts/build.mjs
 import { cpSync, existsSync, readdirSync, readFileSync, rmSync, statSync } from 'node:fs';
@@ -10,7 +10,7 @@ const DIST = join(ROOT, 'dist');
 const ORIGIN = 'https://www.followyourcode.pl';
 
 // Repository files that are not part of the website. Dotfiles are skipped too.
-const NOT_SITE = new Set(['legacy', 'scripts', 'dist', 'node_modules', 'amplify.yml', 'AGENTS.md', 'CLAUDE.md', 'README.md']);
+const NOT_SITE = new Set(['legacy', 'scripts', 'dist', 'node_modules', 'package.json', 'package-lock.json', 'amplify.yml', 'AGENTS.md', 'CLAUDE.md', 'README.md']);
 const SITE_TYPES = new Set(['.html', '.css', '.js', '.xml', '.txt', '.webmanifest', '.png', '.jpg', '.jpeg', '.svg', '.webp', '.ico', '.woff2', '.pdf']);
 const TEXT_TYPES = new Set(['.html', '.css', '.js', '.xml', '.txt', '.webmanifest']);
 

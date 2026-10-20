@@ -30,8 +30,8 @@ Plain HTML, CSS and JS at the repository root, edited by hand: no framework, no 
 
 ## Commands
 
-- `node scripts/serve.mjs` - local preview at http://127.0.0.1:8000, answering like Amplify, with caching off. A plain `python -m http.server` lets the browser keep a stale `style.css`.
-- `node scripts/build.mjs` - copies the website into `dist/` (gitignored) and checks it: internal links and assets, titles, meta descriptions, canonical and `og:url`, one `<h1>`, image `alt`, JSON-LD syntax, no `noindex` on public pages, `sitemap.xml` listing exactly the public pages. Amplify runs the same command, so a failing check stops the deploy. Repository files that are not part of the website are listed in `NOT_SITE` in the script.
+- `node scripts/serve.mjs` - local preview at http://127.0.0.1:8000, answering like the live hosting, with caching off. A plain `python -m http.server` lets the browser keep a stale `style.css`.
+- `node scripts/build.mjs` (or `npm run build`) - copies the website into `dist/` (gitignored) and checks it: internal links and assets, titles, meta descriptions, canonical and `og:url`, one `<h1>`, image `alt`, JSON-LD syntax, no `noindex` on public pages, `sitemap.xml` listing exactly the public pages. The hosting runs the same command, so a failing check stops the deploy. `package.json` exists only so the hosting's build image provides Node; there are no dependencies. Repository files that are not part of the website are listed in `NOT_SITE` in the script.
 
 ## SEO conventions
 
@@ -58,7 +58,7 @@ Then run `node scripts/build.mjs`. Photos are hosted on Cloudinary (account `cod
 
 ## Deploy, repo, privacy
 
-- Production is https://www.followyourcode.pl on AWS Amplify (CloudFront + S3), built from `amplify.yml`: `node scripts/build.mjs`, then `dist/` is deployed. Amplify serves `404.html` for missing paths. Treat a push to `main` as publishing the live site: confirm with the user first.
+- Production is https://www.followyourcode.pl on DigitalOcean App Platform (DNS on DigitalOcean too), a static site built from the `newdesign` branch: build command `npm run build`, output directory `dist`, error document `404.html`. Treat a push to the deployed branch as publishing the live site: confirm with the user first. `amplify.yml` is the earlier AWS Amplify setup, which built `main`.
 - `origin` is the co-author's GitHub repo; both authors push to `main`. Never force-push or rewrite history. `.github/workflows/github.yaml` is GitHub's hello-world placeholder and builds nothing.
 - Analytics: GA4, ID in `data-ga-id` on the cookie popup of every page. GA is opt-in: `assets/js/main.js` loads gtag only after "Akceptuję", and only on the followyourcode.pl hostname, so local previews never reach GA. The choice is kept in the `cookie_consent` cookie for 180 days, "Ustawienia cookies" in the footer reopens the popup, and rejecting deletes the `_ga*` cookies. Never add a tracker or third-party embed that runs before consent.
 - `polityka-prywatnosci/index.html` names both authors as data administrators and describes the consent popup - update it whenever a change collects data (forms, trackers, third-party embeds).
